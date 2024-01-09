@@ -10,7 +10,12 @@ export default function Home() {
       <Text language="en" type="paragraph">
         Hello Everyone welcome to Memory
       </Text>
-      <Text language="en" type="link" url="/pages/about/about-actors">
+      <Text
+        className="text-sky"
+        language="en"
+        type="link"
+        url="/pages/about/about-actors"
+      >
         About Actors
       </Text>
     </main>

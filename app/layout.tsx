@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import "./resetcss.css";
+import "./globals.css";
+import Navbar from "@/components/modules/navigation/Navbar";
+import Footer from "@/components/sections/Footer";
 
 export const metadata: Metadata = {
   title: "Memory",
@@ -14,7 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body className="">{children}</body>
+      <body className="">
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
