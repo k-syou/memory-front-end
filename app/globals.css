@@ -4,25 +4,25 @@
 
 // font setting
 @font-face {
-  font-family: 'Pretendard';
-  src: url('/fonts/PretendardVariable.ttf') format('truetype');
+  font-family: "Pretendard";
+  src: url("/fonts/PretendardVariable.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Raleway';
-  src: url('/fonts/Raleway-VariableFont_wght.ttf') format('truetype');
+  font-family: "Raleway";
+  src: url("/fonts/Raleway-VariableFont_wght.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 .font-ko {
-  font-family: Pretendard;
+  font-family: Montserrat, Pretendard;
 }
 .font-en {
   font-family: Montserrat, Raleway;
