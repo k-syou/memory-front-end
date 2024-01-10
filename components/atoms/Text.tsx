@@ -1,33 +1,32 @@
 import { cn } from "@/lib/utils";
 import { VariantProps, cva } from "class-variance-authority";
+import Link from "next/link";
 import { forwardRef } from "react";
-
-// font-family
-const font_ko = "font-ko";
-const font_en = "font-en";
 
 // text variants
 // class name values from figma
-const TextVariants = cva("", {
+const TextVariants = cva("leading-normal tracking-normal", {
   variants: {
     variant: {
       default: "text-base",
-      desk_lg: "text-[5rem] font-bold leading-[6rem] -tracking-[0.1rem]",
-      desk_md: "text-[3rem] font-bold leading-[3.6rem] -tracking-[0.06rem]",
-      desk_sm: "text-[1.5rem] font-bold leading-[1.8rem] -tracking-[0.03rem]",
-      desk_body: "text-base leading-[1.5rem] -tracking-[0.02rem]",
-      desk_caption:
-        "text-[0.5625rem] leading-[0.84375rem] -tracking-[0.01125rem]",
-      mobile_lg: "text-[2.5rem] font-bold leading-[3rem] -tracking-[0.05rem]",
-      mobile_md: "text-[2rem] font-bold leading-[2.4rem] -tracking-[0.04rem]",
-      mobile_sm: "text-[1.5rem] font-bold leading-[1.8rem] -tracking-[0.03rem]",
-      mobile_body: "text-base leading-[1.5rem] -tracking-[0.02rem]",
-      mobile_caption:
-        "text-[0.5625rem] leading-[0.84375rem] -tracking-[0.01125rem]",
+      web_h1: "text-4xl font-light",
+      web_h2: "text-3xl font-light",
+      web_h3: "text-2xl font-normal",
+      web_h4: "text-xl font-normal",
+      web_h5: "text-lg font-normal",
+      web_h6: "text-md font-normal",
+      web_subtitle1: "text-base font-medium",
+      web_subtitle2: "text-sm font-medium",
+      web_body1: "text-base font-normal",
+      web_body2: "text-sm font-normal",
+      web_btn: "text-sm font-medium",
+      web_caption: "text-xs font-normal",
+      web_overline: "text-2xs font-normal"
     },
     language: {
-      ko: font_ko,
-      en: font_en,
+      ko: "font-ko",
+      en: "font-en",
+      test: "font-test"
     },
   },
   defaultVariants: {
@@ -39,7 +38,7 @@ const TextVariants = cva("", {
 export interface TextProps
   extends React.HTMLAttributes<HTMLParagraphElement | HTMLHeadingElement>,
     VariantProps<typeof TextVariants> {
-  type: "heading" | "paragraph" | "link";
+  type?: "heading" | "paragraph" | "link" | "none";
   url?: string;
 }
 
@@ -55,15 +54,19 @@ const Text = forwardRef<HTMLParagraphElement | HTMLHeadingElement, TextProps>(
         </h1>
       );
     } else if (type === "link") {
+      if (url === undefined || url === null || url === '') {
+        console.log('need url option');
+        url = '/';
+      }
       return (
-        <a
+        <Link
           className={cn(TextVariants({ variant, language, className }))}
-          href={url}
+          href={url!}
         >
           {children}
-        </a>
+        </Link>
       );
-    } else {
+    } else if (type === "paragraph") {
       return (
         <p
           className={cn(TextVariants({ variant, language, className }))}
@@ -71,6 +74,15 @@ const Text = forwardRef<HTMLParagraphElement | HTMLHeadingElement, TextProps>(
         >
           {children}
         </p>
+      );
+    } else {
+      return (
+        <span
+          className={cn(TextVariants({ variant, language, className }))}
+          ref={ref}
+        >
+          {children}
+        </span>
       );
     }
   }
