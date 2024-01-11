@@ -4,7 +4,7 @@ import Navbar from "@/components/modules/navigation/Navbar";
 import Footer from "@/components/sections/Footer";
 import localFont from "next/font/local";
 import { Montserrat } from "next/font/google";
-import Container from "@/components/atoms/container";
+import Container from "@/components/atoms/Container";
 
 // font
 const pretendard = localFont({
@@ -36,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className={`${pretendard.className} ${montserrat.className}`}>
+    <html lang="ko" className={`${pretendard.className} ${montserrat.className} bg-white`}>
       <body>
         <Navbar />
         <Container>

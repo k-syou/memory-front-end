@@ -2,7 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-// import fonts
+
+.menu-btn {
+  @apply stroke-black fill-black hover:fill-white hover:stroke-white hover:bg-black rounded-full active:bg-gray transition-colors duration-500
+  active:fill-white active:stroke-white
+}
+
+.side-bar {
+  @apply fixed left-0 top-0 z-10 bg-black bg-opacity-70 h-full text-gray transition-all rounded-tr-2xl rounded-br-xl duration-500
+}
+
+/* import fonts */
 /* @font-face {
   font-family: "Pretendard";
   src: url("/fonts/PretendardVariable.ttf") format("truetype");
@@ -22,7 +32,7 @@
   font-style: normal;
 } */
 
-// reset css
+/* reset css */
 html, body, div, span, applet, object, iframe, h1, h2, h3, 
 h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, 
 cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, 
