@@ -1,5 +1,5 @@
+import Text from "@/components/atoms/Text";
 import React from "react";
-
 type Props = {
   isOpen?: boolean;
   onClick?: any;
@@ -7,46 +7,32 @@ type Props = {
   boxSize: number; // pixel
 };
 
-const MenuButton = ({ isOpen, onClick, size, boxSize}: Props) => {
+const MenuButton = ({ isOpen, onClick, size, boxSize }: Props) => {
   const getMenuButton = () => {
     if (!isOpen) {
       return (
-        <button onClick={() => onClick()} className={`menu-btn w-[${boxSize}px] h-[${boxSize}px]`}>
-          <svg
-            width={`${size}`}
-            height={`${size}`}
-            // viewBox={`${size} ${size} ${size} ${size}`}
-            fill="current"
-            xmlns="http://www.w3.org/2000/svg"
-            className="m-2"
+        <button onClick={() => onClick()} className={`menu-btn`}>
+          <span
+            className={`material-icons text-xl justify-center items-center mr-4`}
           >
-            <g id="material-symbols:menu">
-              <path
-                id="Vector"
-                d="M7.85693 47.1428V41.9047H54.9998V47.1428H7.85693ZM7.85693 34.0476V28.8095H54.9998V34.0476H7.85693ZM7.85693 20.9523V15.7142H54.9998V20.9523H7.85693Z"
-                fillRule="evenodd"
-              />
-            </g>
-          </svg>
+            menu
+          </span>
+          <Text variant={"web_h5"} className="items-center justify-center">
+            메뉴
+          </Text>
         </button>
       );
     } else {
       return (
-        <button onClick={() => onClick()} className={`menu-btn w-[${boxSize}px] h-[${boxSize}px]`}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width={`${size}`}
-            height={`${size}`}
-            // viewBox={`0 0 ${size} ${size}`}
-            fill="current"
-            className="m-2"
+        <button onClick={() => onClick()} className={`menu-btn menu-open`}>
+          <span
+            className={`material-icons text-xl justify-center items-center mr-4`}
           >
-            <path
-              d="M13 13L49 49M13 49L49 13"
-              fill='current'
-              stroke-width="5.2"
-            />
-          </svg>
+            close
+          </span>
+          <Text variant={"web_h5"} className="items-center justify-center">
+            닫기
+          </Text>
         </button>
       );
     }

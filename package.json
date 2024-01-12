@@ -13,10 +13,12 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@mdi/font": "^7.4.47",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "framer-motion": "^10.17.9",
     "lucide-react": "^0.307.0",
+    "material-icons": "^1.13.12",
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.2.0",
