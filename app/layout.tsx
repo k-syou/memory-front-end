@@ -3,8 +3,8 @@ import "./globals.css";
 import "./globalicons.css"
 import Navbar from "@/components/modules/navigation/Navbar";
 import Footer from "@/components/sections/Footer";
-import localFont from "next/font/local";
-import { Montserrat } from "next/font/google";
+// import localFont from "next/font/local";
+// import { Montserrat } from "next/font/google";
 import Container from "@/components/atoms/Container";
 
 // font

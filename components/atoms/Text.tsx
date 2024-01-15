@@ -61,7 +61,7 @@ const Text = forwardRef<HTMLParagraphElement | HTMLHeadingElement, TextProps>(
       return (
         <Link
           className={cn(TextVariants({ variant, language, className }))}
-          href={url!}
+          href={String(url!)}
         >
           {children}
         </Link>
