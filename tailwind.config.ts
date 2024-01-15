@@ -34,7 +34,10 @@ const config: Config = {
     colors: {
       // Test
       black: "#000",
-      gray: "#e5e5e5",
+      "dark-gray" : "#666",
+      "medium-gray" : "#999",
+      "light-gray" : "#dedede",
+      gray: "#f3f3f3",
       white: "#fff",
       "milky-white": "#fafafa"
     },

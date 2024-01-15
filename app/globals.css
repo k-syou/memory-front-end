@@ -7,7 +7,7 @@
 /* Menu Button */
 .menu-btn {
   @apply text-black hover:text-white hover:border-black 
-  hover:bg-black  transition-colors duration-300 border-solid border-b border-l box-border
+  hover:bg-black  transition-colors border-solid border-b border-l box-border
   h-full flex justify-center items-center pt-5 pb-5 pl-6 pr-8
 }
 .menu-btn.menu-open {
@@ -16,7 +16,8 @@
 
 
 .side-bar {
-  @apply fixed left-0 top-0 z-10 bg-black text-gray transition-all duration-500
+  @apply fixed left-0 top-0 z-10 text-gray transition-all duration-500 pb-[80px]
+  /* @apply fixed left-0 top-0 z-10 bg-black text-gray transition-all duration-500 */
 }
 
 /* import fonts */
@@ -34,6 +35,13 @@
   font-family: "Raleway";
   src: url("/fonts/Raleway-VariableFont_wght.ttf") format("truetype");
   font-style: normal;
+}
+
+.menu-image {
+  background-image: url("../public/images/MenuImage.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0%;
 }
 
 /* reset css */

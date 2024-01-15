@@ -1,4 +1,5 @@
 import Text from "@/components/atoms/Text";
+import { motion as m } from "framer-motion";
 import React from "react";
 type Props = {
   isOpen?: boolean;
@@ -7,35 +8,28 @@ type Props = {
   boxSize: number; // pixel
 };
 
-const MenuButton = ({ isOpen, onClick, size, boxSize }: Props) => {
+const MenuButton = ({ isOpen, onClick }: Props) => {
   const getMenuButton = () => {
-    if (!isOpen) {
-      return (
-        <button onClick={() => onClick()} className={`menu-btn`}>
-          <span
-            className={`material-icons text-xl justify-center items-center mr-4`}
-          >
-            menu
-          </span>
-          <Text variant={"web_h5"} className="items-center justify-center">
-            메뉴
-          </Text>
-        </button>
-      );
-    } else {
-      return (
-        <button onClick={() => onClick()} className={`menu-btn menu-open`}>
-          <span
-            className={`material-icons text-xl justify-center items-center mr-4`}
-          >
-            close
-          </span>
-          <Text variant={"web_h5"} className="items-center justify-center">
-            닫기
-          </Text>
-        </button>
-      );
-    }
+    return (
+      <m.button onClick={() => onClick()}
+        animate={{
+          borderColor: isOpen ? "#fafafa":"#000",
+        }}
+        transition={{
+          duration: 0
+        }}
+        className={`menu-btn ${isOpen ? 'menu-open':''}`}
+      >
+        <span
+          className={`material-icons text-xl justify-center items-center mr-4`}
+        >
+          {isOpen ? "close" : "menu"}
+        </span>
+        <Text variant={"web_h5"} className="items-center justify-center">
+          {isOpen ? "닫기" : "메뉴"}
+        </Text>
+      </m.button>
+    );
   };
 
   return getMenuButton();

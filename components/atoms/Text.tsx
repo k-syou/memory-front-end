@@ -39,7 +39,7 @@ export interface TextProps
   extends React.HTMLAttributes<HTMLParagraphElement | HTMLHeadingElement>,
     VariantProps<typeof TextVariants> {
   type?: "heading" | "paragraph" | "link" | "none";
-  url?: string;
+  url?: string | String;
 }
 
 const Text = forwardRef<HTMLParagraphElement | HTMLHeadingElement, TextProps>(

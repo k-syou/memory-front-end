@@ -1,4 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="155" height="155" viewBox="0 0 155 155" fill="none">
-<line x1="52.9441" y1="52.237" x2="102.763" y2="102.056" stroke="white"/>
-<line x1="52.237" y1="102.056" x2="102.056" y2="52.237" stroke="white"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+<g clip-path="url(#clip0_113_52)">
+<line x1="14.2515" y1="13.5446" x2="50.4554" y2="49.7484" stroke="white"/>
+<line x1="13.5444" y1="49.7484" x2="49.7483" y2="13.5445" stroke="white"/>
+</g>
+<defs>
+<clipPath id="clip0_113_52">
+<rect width="64" height="64" fill="white"/>
+</clipPath>
+</defs>
 </svg>
