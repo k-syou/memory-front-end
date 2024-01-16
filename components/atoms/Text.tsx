@@ -59,12 +59,12 @@ const Text = forwardRef<HTMLParagraphElement | HTMLHeadingElement, TextProps>(
         url = '/';
       }
       return (
-        <Link
+        <a
           className={cn(TextVariants({ variant, language, className }))}
           href={String(url!)}
         >
           {children}
-        </Link>
+        </a>
       );
     } else if (type === "paragraph") {
       return (

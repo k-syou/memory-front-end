@@ -23,7 +23,8 @@ const MenuWindow = ({ isSideBarOpen, menuItem }: Props) => {
         {isSideBarOpen && (
           <>
             <div className="w-[40%] h-full border-r border-solid border-white box-border sm:block hidden p-11">
-              <m.div
+              <m.a
+                href="/"
                 className="menu-image h-full w-full"
                 initial={{
                   opacity: 0,
@@ -38,7 +39,7 @@ const MenuWindow = ({ isSideBarOpen, menuItem }: Props) => {
                   duration: 0.3,
                   delay: 0.3,
                 }}
-              ></m.div>
+              ></m.a>
             </div>
             <m.div
               className="flex flex-col justify-center sm:w-[60%] w-full whitespace-nowrap my-auto"
