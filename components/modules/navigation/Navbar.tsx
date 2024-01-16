@@ -5,7 +5,6 @@ import NavItem from "./NavItem";
 import { motion as m } from "framer-motion";
 import MenuWindow from "./MenuWindow";
 
-
 interface MenuInfos {
   menuNames: Array<String>;
   subMenuInfo: Array<any>;
@@ -27,11 +26,15 @@ const menuInfos: MenuInfos = {
     ["공연사진", "연습사진"],
   ],
   menuLinks: [
-    ["/pages/about/about-troupe", "/pages/about/about-actors", "/pages/about/recruit-actors"],
+    [
+      "/pages/about/about-troupe",
+      "/pages/about/about-actors",
+      "/pages/about/recruit-actors",
+    ],
     ["/pages/program&play/play", "/pages/program&play/review"],
     ["/pages/ticket"],
     ["/pages/photo/photo-play", "/pages/photo/photo-practice"],
-  ]
+  ],
 };
 
 const Navbar = () => {
@@ -42,8 +45,10 @@ const Navbar = () => {
     setArrIsMenuOpens(tempArr);
   };
 
-  const [arrIsMenuOpens, setArrIsMenuOpens] = useState(new Array(menuInfos.menuNames.length).fill(false))
-  const clickSubMenu = (index:number) => {
+  const [arrIsMenuOpens, setArrIsMenuOpens] = useState(
+    new Array(menuInfos.menuNames.length).fill(false)
+  );
+  const clickSubMenu = (index: number) => {
     let tempArr = arrIsMenuOpens.slice();
     if (tempArr[index]) {
       tempArr[index] = false;
@@ -52,33 +57,38 @@ const Navbar = () => {
       tempArr[index] = true;
     }
     setArrIsMenuOpens(tempArr);
-  }
+  };
 
   const renderMenuItem = () => {
-    let tempMenuNames:Array<String> = menuInfos.menuNames;
-    let subMenuInfos:Array<any> = menuInfos.subMenuInfo;
+    let tempMenuNames: Array<String> = menuInfos.menuNames;
+    let subMenuInfos: Array<any> = menuInfos.subMenuInfo;
     let menuLinks = menuInfos.menuLinks;
     let result = tempMenuNames.map((value, idx) => {
-      
       let subMenuInfo = subMenuInfos[idx];
-      let menuLink = menuLinks[idx]
-      let tempMenuInfo:MenuInfo = {
+      let menuLink = menuLinks[idx];
+      let tempMenuInfo: MenuInfo = {
         menuName: value,
         subMenus: subMenuInfo,
         menuLinks: menuLink,
-      }
+      };
       return (
-        <NavItem key={`menu-${idx}`} isOpen={arrIsMenuOpens[idx]} onClick={clickSubMenu} idx={idx} menuInfo={tempMenuInfo}/>
-      )
-    })
-    return result
-  }
+        <NavItem
+          key={`menu-${idx}`}
+          isOpen={arrIsMenuOpens[idx]}
+          onClick={clickSubMenu}
+          idx={idx}
+          menuInfo={tempMenuInfo}
+        />
+      );
+    });
+    return result;
+  };
   return (
     <m.nav
       className={`w-full relative h-20 border-b border-solid box-border border-collapse table`}
       animate={{
         backgroundColor: isSideBarOpen ? "#000" : "#fafafa",
-        borderColor: !isSideBarOpen ? "#000" : "#fafafa"
+        borderColor: !isSideBarOpen ? "#000" : "#fafafa",
       }}
     >
       {/* Menu Button */}
@@ -119,7 +129,7 @@ const Navbar = () => {
           {renderMenuItem()}
         </m.div>
       </m.div> */}
-      <MenuWindow isSideBarOpen={isSideBarOpen} menuItem={renderMenuItem}/>
+      <MenuWindow isSideBarOpen={isSideBarOpen} menuItem={renderMenuItem} />
     </m.nav>
   );
 };

@@ -3,7 +3,7 @@ import React from "react";
 import PlusIcon from "@/public/svg/mdi-light_plus.svg";
 import CloseIcon from "@/public/svg/mdi-light_close.svg";
 import { MenuInfo } from "./Navbar";
-import { motion as m } from "framer-motion";
+import { AnimatePresence, motion as m } from "framer-motion";
 
 type Props = {
   menuInfo: MenuInfo;
@@ -57,19 +57,65 @@ const NavItem = ({ menuInfo, isOpen, onClick, idx }: Props) => {
           </Text>
         </button>
         <m.div className={`flex w-full overflow-hidden`}>
-          <m.ul
-            className={`pl-[90px]`}
-            initial={{ scale: 0, height: 0 }}
-            animate={{ scale: 1, height: isOpen ? "auto" : 0 }}
-          >
-            {subMenuNames.map((value, i) => {
-              return (
-                <li key={i} className="my-4 text-start">
-                  <Text type="link" className="text-white" url={menuInfo.menuLinks[i]} variant={"web_h5"}>{value}</Text>
-                </li>
-              );
-            })}
-          </m.ul>
+          <AnimatePresence>
+            {isOpen && (
+              <m.ul
+                variants={{
+                  out: {
+                    height: 0,
+                    opacity: 0
+                  },
+                  in: {
+                    opacity: 1,
+                    height: "auto",
+                    transition: {
+                      duration: .6,
+                      delayChildren: 0.1,
+                      staggerChildren: 0.1,
+                    },
+                  },
+                }}
+                initial="out"
+                animate="in"
+                exit="out"
+                className={`pl-[90px]`}
+                // initial={{ height: 0 , opacity: 0, x: 30}}
+                // animate={{ scale: 1 ,height: "auto", opacity:1, x:0 }}
+                // exit={{height:0, opacity:0}}
+                // transition={{
+                //   duration: .3,
+                //   delayChildren: 1,
+                //   staggerChildren: 1,
+                // }}
+              >
+                {subMenuNames.map((value, i) => {
+                  return (
+                    <m.li
+                      key={i}
+                      className="my-4 text-start"
+                      variants={{
+                        out: {
+                          opacity: 0
+                        },
+                        in: {
+                          opacity: 1
+                        },
+                      }}
+                    >
+                      <Text
+                        type="link"
+                        className="text-white"
+                        url={menuInfo.menuLinks[i]}
+                        variant={"web_h5"}
+                      >
+                        {value}
+                      </Text>
+                    </m.li>
+                  );
+                })}
+              </m.ul>
+            )}
+          </AnimatePresence>
         </m.div>
       </div>
       <div

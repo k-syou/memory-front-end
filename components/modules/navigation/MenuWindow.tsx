@@ -25,7 +25,7 @@ const MenuWindow = ({ isSideBarOpen, menuItem }: Props) => {
             <div className="w-[40%] h-full border-r border-solid border-white box-border sm:block hidden p-11">
               <m.a
                 href="/"
-                className="menu-image h-full w-full"
+                className="menu-image block h-full w-full"
                 initial={{
                   opacity: 0,
                 }}
@@ -59,8 +59,8 @@ const MenuWindow = ({ isSideBarOpen, menuItem }: Props) => {
                 x: 100,
               }}
               transition={{
-                duration: .5,
-                delay: .3,
+                duration: 0.5,
+                delay: 0.3,
               }}
             >
               {menuItem()}
