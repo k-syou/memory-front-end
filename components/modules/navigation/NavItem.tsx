@@ -1,19 +1,22 @@
+"use client"
 import Text from "@/components/atoms/Text";
 import React from "react";
 import PlusIcon from "@/public/svg/mdi-light_plus.svg";
 import CloseIcon from "@/public/svg/mdi-light_close.svg";
-import { MenuInfo } from "./Navbar";
+import { MenuInfo } from "./Navbar.d";
 import { AnimatePresence, motion as m } from "framer-motion";
-
+import { useRouter } from "next/navigation";
 type Props = {
   menuInfo: MenuInfo;
   isOpen?: boolean;
   onClick?: any;
   idx: number;
+  movePage: any
 };
-const NavItem = ({ menuInfo, isOpen, onClick, idx }: Props) => {
+const NavItem = ({ menuInfo, isOpen, onClick, idx, movePage }: Props) => {
   const menuName = menuInfo.menuName;
   const subMenuNames: Array<String> = menuInfo.subMenus;
+  const route = useRouter();
   return (
     <div className="pl-[10%]">
       <div className={`${idx === 0 ? "" : "mt-6"}`}>
@@ -63,13 +66,13 @@ const NavItem = ({ menuInfo, isOpen, onClick, idx }: Props) => {
                 variants={{
                   out: {
                     height: 0,
-                    opacity: 0
+                    opacity: 0,
                   },
                   in: {
                     opacity: 1,
                     height: "auto",
                     transition: {
-                      duration: .6,
+                      duration: 0.6,
                       delayChildren: 0.1,
                       staggerChildren: 0.1,
                     },
@@ -79,14 +82,6 @@ const NavItem = ({ menuInfo, isOpen, onClick, idx }: Props) => {
                 animate="in"
                 exit="out"
                 className={`pl-[90px]`}
-                // initial={{ height: 0 , opacity: 0, x: 30}}
-                // animate={{ scale: 1 ,height: "auto", opacity:1, x:0 }}
-                // exit={{height:0, opacity:0}}
-                // transition={{
-                //   duration: .3,
-                //   delayChildren: 1,
-                //   staggerChildren: 1,
-                // }}
               >
                 {subMenuNames.map((value, i) => {
                   return (
@@ -95,21 +90,26 @@ const NavItem = ({ menuInfo, isOpen, onClick, idx }: Props) => {
                       className="my-4 text-start"
                       variants={{
                         out: {
-                          opacity: 0
+                          opacity: 0,
                         },
                         in: {
-                          opacity: 1
+                          opacity: 1,
                         },
                       }}
                     >
-                      <Text
-                        type="link"
-                        className="text-white"
-                        url={menuInfo.menuLinks[i]}
-                        variant={"web_h5"}
+                      <button
+                        onClick={() =>
+                          movePage(menuInfo.menuLinks[i].toString())
+                        }
                       >
-                        {value}
-                      </Text>
+                        <Text
+                          type="paragraph"
+                          className="text-white"
+                          variant={"web_h5"}
+                        >
+                          {value}
+                        </Text>
+                      </button>
                     </m.li>
                   );
                 })}

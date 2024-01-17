@@ -1,10 +1,8 @@
+@import 'material-icons/iconfont/material-icons.css';
+@import url("@mdi/font/css/materialdesignicons.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-body {
-  min-height: 1000px
-}
 
 /* Menu Button */
 .menu-btn {

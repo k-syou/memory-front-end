@@ -1,23 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import "./globalicons.css"
 import Navbar from "@/components/modules/navigation/Navbar";
 import Footer from "@/components/sections/Footer";
-// import localFont from "next/font/local";
-// import { Montserrat } from "next/font/google";
 import Container from "@/components/atoms/Container";
-
-// font
-// const pretendard = localFont({
-//   src: '../public/fonts/PretendardVariable.ttf',
-//   variable: '--font-pretendard',
-//   display: 'swap'
-// })
-// const montserrat = localFont({
-//   src: '../public/fonts/Montserrat-VariableFont_wght.ttf',
-//   display: 'swap',
-//   variable: '--font-montserrat'
-// })
 
 export const metadata: Metadata = {
   title: "Memory",
@@ -30,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className={`bg-milky-white`}>
+    <html lang="ko" className={`bg-milky-white relative`}>
       <body>
         <Navbar />
         <Container>

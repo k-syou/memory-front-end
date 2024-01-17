@@ -1,8 +1,6 @@
 import Text from "@/components/atoms/Text";
 import { motion as m } from "framer-motion";
 import React from "react";
-import { MdOutlineMenu } from "react-icons/md";
-import { IoMdClose } from "react-icons/io";
 type Props = {
   isOpen?: boolean;
   onClick?: any;
@@ -13,21 +11,20 @@ type Props = {
 const MenuButton = ({ isOpen, onClick }: Props) => {
   const getMenuButton = () => {
     return (
-      <m.button
-        onClick={() => onClick()}
+      <m.button onClick={() => onClick()}
         animate={{
-          borderColor: isOpen ? "#fafafa" : "#000",
+          borderColor: isOpen ? "#fafafa":"#000",
         }}
         transition={{
-          duration: 0,
+          duration: 0
         }}
-        className={`menu-btn ${isOpen ? "menu-open" : ""}`}
+        className={`menu-btn ${isOpen ? 'menu-open':''}`}
       >
-        {isOpen ? (
-          <IoMdClose className="text-xl justify-center items-center mr-4" />
-        ) : (
-          <MdOutlineMenu className="text-xl justify-center items-center mr-4" />
-        )}
+        <span
+          className={`material-icons text-xl justify-center items-center mr-4`}
+        >
+          {isOpen ? "close" : "menu"}
+        </span>
         <Text variant={"web_h5"} className="items-center justify-center">
           {isOpen ? "닫기" : "메뉴"}
         </Text>

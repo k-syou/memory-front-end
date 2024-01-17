@@ -3,11 +3,12 @@ import Text from "../atoms/Text";
 
 const Footer = () => {
   return (
-    <footer className="container w-full text-center mx-auto bg-sky">
+    <footer className="w-full text-center mx-auto bg-dark-gray min-h-32 absolute bottom-0 z-[-1]">
       <Text
         language={"en"}
-        variant={"desk_md"}
+        variant={"web_h4"}
         type="paragraph"
+        className="block pt-3"
       >{`FOOTER`}</Text>
     </footer>
   );

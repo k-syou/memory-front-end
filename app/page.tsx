@@ -5,19 +5,8 @@ export default function Home() {
   return (
     <main className="">
       {/* 테스트 소스코드 */}
-        <Text language="ko" type="paragraph">
-          기억에 오신 여러분들을 환영합니다
-        </Text>
-        <Text language="en" type="paragraph">
-          Hello Everyone welcome to Memory
-        </Text>
-        <Text
-          className="text-sky"
-          language="en"
-          type="link"
-          url="/pages/about/about-actors"
-          >
-          About Actors
+        <Text language="en" variant={"web_h1"} type="paragraph" className="text-center">
+          Hello Everyone <br></br> Welcome to Memory
         </Text>
       {/*  */}
     </main>
