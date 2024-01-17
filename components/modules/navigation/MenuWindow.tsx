@@ -21,19 +21,27 @@ const MenuWindow = ({ isSideBarOpen, menuItem }: Props) => {
             <m.a
               href="/"
               className="menu-image block h-full w-full"
+              variants={{
+                open: {
+                  opacity: 1,
+                  transition: {
+                    duration: .3,
+                    delay: 1
+                  }
+                },
+                close: {
+                  opacity: 0,
+                  transition: {
+                    delay: 0,
+                    duration: .1,
+                  }
+                }
+              }}
               initial={{
                 opacity: 0,
               }}
-              animate={{
-                opacity: 1,
-              }}
-              exit={{
-                opacity: 0,
-              }}
-              transition={{
-                duration: 0.3,
-                delay: 0.3,
-              }}
+              animate="open"
+              exit="close"
             ></m.a>
           </div>
           <m.div

@@ -11,16 +11,12 @@ const config: Config = {
       center: true,
       padding: "1rem",
       screens: {
-        "3lg": { max: "1920px" },
-
-
-
-        
-        "2xl": { max: "1535px" },
-        xl: { max: "1279px" },
-        lg: { max: "1023px" },
-        md: { max: "767px" },
-        sm: { max: "639px" },
+        "3lg": "1920px",
+        "2xl": "1496px",
+        xl: "1240px",
+        lg: "984px",
+        md: "728px",
+        sm: "600px",
       },
     },
     fontSize: {
