@@ -29,6 +29,7 @@ const menuInfos: MenuInfos = {
 
 const Navbar = () => {
   const route = useRouter();
+
   const movePage = (url: string) => {
     let tempArr = new Array(menuInfos.menuNames.length).fill(false);
     setIsSideBarOpen(false);
