@@ -1,14 +1,15 @@
-import Text from "@/components/atoms/Text";
-
+import Main01 from "@/components/modules/mainpage/Main01";
+import Main02 from "@/components/modules/mainpage/Main02";
+import Main03 from "@/components/modules/mainpage/Main03";
+import Main04 from "@/components/modules/mainpage/Main04";
 export default function Home() {
   // 홈페이지
   return (
-    <main className="">
-      {/* 테스트 소스코드 */}
-        <Text language="en" variant={"web_h1"} type="paragraph" className="text-center">
-          Hello Everyone <br></br> Welcome to Memory
-        </Text>
-      {/*  */}
-    </main>
+    <>
+      <Main01 />
+      <Main02 />
+      <Main03 />
+      <Main04 />
+    </>
   );
 }

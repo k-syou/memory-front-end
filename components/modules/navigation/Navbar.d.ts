@@ -1,11 +1,12 @@
 export interface MenuInfos {
-  menuNames: Array<String>;
+  mainMenuNames: Array<string>;
+  mainMenuLinks: Array<any>;
   subMenuInfo: Array<any>;
-  menuLinks: Array<any>;
+  subMenuLinks: Array<any>;
 }
 
 export interface MenuInfo {
-  menuName: String;
-  subMenus: Array<String>;
-  menuLinks: Array<String>;
+  menuName: string;
+  subMenus: Array<string>;
+  menuLinks: Array<string>;
 }

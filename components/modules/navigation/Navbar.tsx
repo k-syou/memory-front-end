@@ -1,28 +1,26 @@
 "use client";
-import React, { useState } from "react";
-import MenuButton from "./MenuButton";
-import NavItem from "./NavItem";
+import React, { useEffect, useState } from "react";
 import { motion as m } from "framer-motion";
-import MenuWindow from "./MenuWindow";
-import { MenuInfo, MenuInfos } from "./Navbar.d";
+import { MenuInfos } from "./Navbar.d";
 import { useRouter } from "next/navigation";
+import MenuBox from "./MenuBox";
+import Text from "@/components/atoms/Text";
 
 const menuInfos: MenuInfos = {
-  menuNames: ["극단 기억", "공연", "예매", "사진"],
+  mainMenuNames: ["극단 기억", "극단 앨범", "극단 소개"],
+  mainMenuLinks: ["#","#","#"],
   subMenuInfo: [
     ["극단 소개", "배우 소개", "배우 모집"],
     ["공연", "리뷰"],
-    ["예매페이지"],
     ["공연사진", "연습사진"],
   ],
-  menuLinks: [
+  subMenuLinks: [
     [
       "/pages/about/about-troupe",
       "/pages/about/about-actors",
       "/pages/about/recruit-actors",
     ],
     ["/pages/program&play/play", "/pages/program&play/review"],
-    ["/pages/ticket"],
     ["/pages/photo/photo-play", "/pages/photo/photo-practice"],
   ],
 };
@@ -30,81 +28,52 @@ const menuInfos: MenuInfos = {
 const Navbar = () => {
   const route = useRouter();
 
-  const movePage = (url: string) => {
-    let tempArr = new Array(menuInfos.menuNames.length).fill(false);
-    setIsSideBarOpen(false);
-    setArrIsMenuOpens(tempArr);
-    route.push(url);
-  };
+  useEffect(() => {
+    // navbar hover effect
+    document.getElementById("nav-items")?.addEventListener("mouseover", () => {
+      document.getElementById("menu-box")?.classList.remove("hidden");
+    });
+    document.getElementById("nav-items")?.addEventListener("mouseleave", () => {
+      document.getElementById("menu-box")?.classList.add("hidden");
+    });
+    document.getElementById("menu-box")?.addEventListener("mouseover", () => {
+      document.getElementById("menu-box")?.classList.remove("hidden");
+    });
+    document.getElementById("menu-box")?.addEventListener("mouseleave", () => {
+      document.getElementById("menu-box")?.classList.add("hidden");
+    });
+  });
 
-  const [isSideBarOpen, setIsSideBarOpen] = useState(false);
-  const clickMenu = () => {
-    let tempArr = new Array(menuInfos.menuNames.length).fill(false);
-    setIsSideBarOpen(!isSideBarOpen);
-    setArrIsMenuOpens(tempArr);
-  };
-
-  const [arrIsMenuOpens, setArrIsMenuOpens] = useState(
-    new Array(menuInfos.menuNames.length).fill(false)
-  );
-  const clickSubMenu = (index: number) => {
-    let tempArr = arrIsMenuOpens.slice();
-    if (tempArr[index]) {
-      tempArr[index] = false;
-    } else {
-      tempArr = new Array(menuInfos.menuNames.length).fill(false);
-      tempArr[index] = true;
-    }
-    setArrIsMenuOpens(tempArr);
-  };
-
-  const renderMenuItem = () => {
-    let tempMenuNames: Array<String> = menuInfos.menuNames;
-    let subMenuInfos: Array<any> = menuInfos.subMenuInfo;
-    let menuLinks = menuInfos.menuLinks;
-    let result = tempMenuNames.map((value, idx) => {
-      let subMenuInfo = subMenuInfos[idx];
-      let menuLink = menuLinks[idx];
-      let tempMenuInfo: MenuInfo = {
-        menuName: value,
-        subMenus: subMenuInfo,
-        menuLinks: menuLink,
-      };
+  const renderMainMenuItems = () => {
+    let mainMenuItems = menuInfos.mainMenuNames.map((menu, idx) => {
       return (
-        <NavItem
-          key={`menu-${idx}`}
-          isOpen={arrIsMenuOpens[idx]}
-          onClick={clickSubMenu}
-          idx={idx}
-          menuInfo={tempMenuInfo}
-          movePage={movePage}
-        />
+        <li
+          className="float-left w-40 h-full flex items-center justify-center"
+          key={idx}
+        >
+          <Text type="link" url={menuInfos.mainMenuLinks[idx]} variant={"web_h6"}>
+            {menu}
+          </Text>
+        </li>
       );
     });
-    return result;
+    return (
+      <ul id="nav-items" className="right-0 h-full absolute mr-5">
+        {mainMenuItems}
+        <MenuBox menuInfos={menuInfos} id="menu-box" />
+      </ul>
+    );
   };
+
   return (
     <>
-      <m.nav
-        className={`fixed top-0 w-full h-20 border-b border-solid box-border border-collapse table`}
-        animate={{
-          backgroundColor: isSideBarOpen ? "#000" : "#fafafa",
-          borderColor: !isSideBarOpen ? "#000" : "#fafafa",
-        }}
+      <nav
+        className={`fixed top-0 w-full h-20 border-b border-solid box-border border-black bg-milky-white z-50 max-w-[1920px]`}
       >
-        {/* Menu Button */}
-        <div className="absolute right-0 h-20 top-0 z-20">
-          <MenuButton
-            isOpen={isSideBarOpen}
-            onClick={clickMenu}
-            size={63}
-            boxSize={80}
-          />
-        </div>
-
-        <MenuWindow isSideBarOpen={isSideBarOpen} menuItem={renderMenuItem} />
-      </m.nav>
-      <div className="h-[80px]"></div>
+        <div className="absolute h-full w-[124px] align-middle text-center leading-[80px] cursor-pointer" onClick={() => route.push("/")}>LOGO</div>
+        <div className="h-full flex justify-end">{renderMainMenuItems()}</div>
+      </nav>
+      <div className="h-20"></div>
     </>
   );
 };

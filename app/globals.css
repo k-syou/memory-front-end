@@ -3,23 +3,26 @@
 @tailwind utilities;
 
 body {
-  min-height: 1000px
+  height: 10000px;
 }
 
 /* Menu Button */
 .menu-btn {
   @apply text-black hover:text-white hover:border-black 
   hover:bg-black  transition-colors border-solid border-b border-l box-border
-  h-full flex justify-center items-center pt-5 pb-5 pl-6 pr-8
+  h-full flex justify-center items-center pt-5 pb-5 pl-6 pr-8;
 }
 .menu-btn.menu-open {
-  @apply border-white text-white 
+  @apply border-white text-white;
 }
 
+.img {
+  @apply absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%];
+}
 
 .side-bar {
   @apply fixed left-0 top-0 z-10 text-gray pb-[80px]
-  /* @apply fixed left-0 top-0 z-10 bg-black text-gray transition-all duration-500 */
+  /* @apply fixed left-0 top-0 z-10 bg-black text-gray transition-all duration-500 */;
 }
 
 /* import fonts */
@@ -47,14 +50,87 @@ body {
 }
 
 /* reset css */
-html, body, div, span, applet, object, iframe, h1, h2, h3, 
-h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, 
-cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, 
-strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, 
-form, label, legend, table, caption, tbody, tfoot, thead, tr, th, 
-td, article, aside, canvas, details, embed, figure, figcaption, 
-footer, header, hgroup, menu, nav, output, ruby, section, summary, 
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -66,20 +142,34 @@ a {
   color: black;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, 
-header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 body {
   line-height: 1;
 }
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
-blockquote:before, blockquote:after, q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
