@@ -25,7 +25,7 @@ const config: Config = {
       "2xl": ["48px", "56px"],
       xl: ["32px", "40px"],
       lg: ["24px", "32px"],
-      md: ["20px", "24px"],
+      md: ["20px", "30px"],
       base: ["16px", "16px"],
       sm: ["14px", "16px"],
       xs: ["12px", "16px"],

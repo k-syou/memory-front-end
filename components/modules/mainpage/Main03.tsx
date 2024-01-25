@@ -2,20 +2,21 @@
 import Container from "@/components/atoms/Container";
 import Text from "@/components/atoms/Text";
 import React, { useRef, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Scrollbar } from "swiper/modules";
-import SwiperCore from "swiper";
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+import ButtonCarousel from "@/components/atoms/ButtonCarousel";
 
-
+const photoData = [
+  "actors/프사_지은.png",
+  "actors/프사_혁진.png",
+  "actors/프사_영민.png",
+  "actors/프사_지은.png",
+  "actors/프사_혁진.png",
+  "actors/프사_영민.png",
+  "actors/프사_지은.png",
+  "actors/프사_혁진.png",
+  "actors/프사_영민.png",
+]
 
 const Main03 = () => {
-  SwiperCore.use([Navigation]);
-  const swiperRef = useRef<SwiperCore>();
-
   return (
     <div className="h-auto border-b border-solid border-black w-full box-border pt-[188px]">
       <Container variant={"main"}>
@@ -30,43 +31,13 @@ const Main03 = () => {
 
       {/* swiper */}
 
-      <Container variant={"main"} className="h-auto relative">
-        <Swiper
-          onSwiper={(swiper) => {
-            swiperRef.current = swiper;
-          }}
-          loop={true}
+      <Container variant={"main"} className="relative h-[345px]">
+        <ButtonCarousel
           spaceBetween={32}
           slidesPerView={5}
-          modules={[Navigation, Scrollbar]}
-          navigation
-          autoplay={false}
-        >
-          <SwiperSlide>
-            <div className="h-[345px] bg-black"></div>
-          </SwiperSlide>;
-          <SwiperSlide>
-            <div className="h-[345px] bg-dark-gray"></div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="h-[345px] bg-medium-gray"></div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="h-[345px] bg-light-gray"></div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="h-[345px] bg-black"></div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="h-[345px] bg-dark-gray"></div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="h-[345px] bg-medium-gray"></div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="h-[345px] bg-light-gray"></div>
-          </SwiperSlide>
-        </Swiper>
+          navigation={true}
+          data={photoData}
+        />
       </Container>
     </div>
   );

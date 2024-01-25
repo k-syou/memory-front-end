@@ -1,4 +1,5 @@
 import Container from '@/components/atoms/Container'
+import SlideCarousel from '@/components/atoms/SlideCarousel'
 import Text from '@/components/atoms/Text'
 import React from 'react'
 
@@ -11,12 +12,13 @@ const Main04 = () => {
         </div>
       </Container>
       <div className="h-auto border-b border-solid border-black w-full box-border"></div>
-      <Container variant={"main"}>
-        <div className='h-[752px] w-full flex gap-8'>
-          <div className='w-[536px] h-full bg-black'></div>
-          <div className='w-[536px] h-full bg-black'></div>
-          <div className='w-[536px] h-full bg-black'></div>
-        </div>
+      <Container variant={"main"} className='h-[752px]'>
+        <SlideCarousel
+          data={["posters/p1.jpg","posters/p2.png"]}
+          slidesPerView={2}
+          pagination={false}
+          spaceBetween={32}
+        />
       </Container>
     </div>
   )
