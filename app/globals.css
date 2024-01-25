@@ -2,8 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  height: 10000px;
+.swiper.swiper-initialized {
+  @apply px-[142px]
+}
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+  @apply h-[345px] w-[110px] bg-milky-white top-[22px] border-x border-solid border-black text-black box-border
+}
+.swiper .swiper-button-prev {
+  @apply left-0
+}
+.swiper .swiper-button-next {
+  @apply right-0
 }
 
 /* Menu Button */

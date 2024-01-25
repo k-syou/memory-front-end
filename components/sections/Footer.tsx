@@ -3,13 +3,18 @@ import Text from "../atoms/Text";
 
 const Footer = () => {
   return (
-    <footer className="w-full text-center mx-auto bg-dark-gray min-h-32 absolute bottom-0 z-[-1]">
+    <footer className="w-full text-center mx-auto pt-[61px] pb-[183px]">
       <Text
         language={"en"}
-        variant={"web_h4"}
+        variant={"web_h5"}
         type="paragraph"
-        className="block pt-3"
-      >{`FOOTER`}</Text>
+      >{`©2022-2024 Keeok All rights reserved.`}</Text>
+      <Text
+        language={"en"}
+        variant={"web_h6"}
+        type="paragraph"
+        className="text-gray"
+      >{`Keeok IT Team. HJ KS KN JE JW SH`}</Text>
     </footer>
   );
 };
