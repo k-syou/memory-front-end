@@ -10,7 +10,8 @@
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --browser chrome",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "netlify-deploy": "next build && next export"
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
