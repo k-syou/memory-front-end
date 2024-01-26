@@ -1,1 +1,0 @@
-{"kind":"FETCH","data":{"headers":{"connection":"keep-alive","content-length":"23","content-type":"application/json; charset=utf-8","date":"Mon, 22 Jan 2024 07:15:35 GMT","etag":"\"cm55fr4ozfl\"","keep-alive":"timeout=5","vary":"Accept-Encoding"},"body":"eyJwb3BvIjp7Im5hbWUiOiLjhLEifX0=","status":200,"url":"http://localhost:3000/api/name"},"revalidate":31536000,"tags":[]}
