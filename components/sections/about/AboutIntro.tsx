@@ -11,8 +11,7 @@ const AboutIntro = () => {
     <>
       <Title
         isUnderLine={true}
-        pb="30px"
-        pt="142px"
+        className="pb-[30px] pt-[142px]"
         text="안녕하세요, 극단 기억입니다."
       />
       <div className="h-auto border-b border-solid border-black w-full box-border flex">

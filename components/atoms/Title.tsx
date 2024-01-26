@@ -7,21 +7,16 @@ import { cn } from "@/lib/utils";
 type Props = {
   isUnderLine: boolean;
   text: string;
-  pt: string;
-  pb: string;
+  className: string;
   align?: "right" | "left" | "center";
 };
 const underLineCss = "border-b border-solid border-black box-border";
 
-const Title = ({ isUnderLine, text, pt, pb, align }: Props) => {
+const Title = ({ isUnderLine, text, align, className}: Props) => {
   align = align ? align : "left";
-  const commonClassNames = cn(`w-full pt-[${pt}] pb-[${pb}] ${
-    isUnderLine ? underLineCss : ""
-  }`)
+  const commonClassNames = cn(`w-full ${isUnderLine ? underLineCss : ""}`, className);
   return (
-    <div
-      className={commonClassNames}
-    >
+    <div className={commonClassNames}>
       <Container variant={"main"}>
         <Text type="paragraph" variant={"web_h3"} className={`text-${align}`}>
           {text}
