@@ -27,7 +27,7 @@ const SlideCarousel = (props: Props) => {
       //   swiperRef.current = swiper;
       // }}
       loop={false}
-      centeredSlides={false}
+      centeredSlides={true}
       spaceBetween={props.spaceBetween}
       slidesPerView={props.slidesPerView}
       modules={[Pagination]}
@@ -49,7 +49,7 @@ const SlideCarousel = (props: Props) => {
           </SwiperSlide>
         );
       })}
-      <SwiperSlide className="h-full w-auto overflow-hidden">
+      <SwiperSlide className="h-full overflow-hidden">
         <div className="flex justify-center text-center h-full">
           <Text variant={"web_h5"} type="paragraph" className="m-auto block">
             👇

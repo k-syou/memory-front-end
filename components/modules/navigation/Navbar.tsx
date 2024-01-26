@@ -8,7 +8,7 @@ import Text from "@/components/atoms/Text";
 
 const menuInfos: MenuInfos = {
   mainMenuNames: ["극단 기억", "극단 앨범", "극단 소개"],
-  mainMenuLinks: ["#","#","#"],
+  mainMenuLinks: ["/pages/about","#","#"],
   subMenuInfo: [
     ["극단 소개", "배우 소개", "배우 모집"],
     ["공연", "리뷰"],
