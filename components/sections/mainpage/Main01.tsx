@@ -1,5 +1,4 @@
 "use client";
-import Text from "@/components/atoms/Text";
 import Image from "next/image";
 import React from "react";
 import MenuImage from "@/public/images/mainImage01.jpg";

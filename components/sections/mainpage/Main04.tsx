@@ -1,6 +1,5 @@
 import Container from "@/components/atoms/Container";
 import SlideCarousel from "@/components/atoms/SlideCarousel";
-import Text from "@/components/atoms/Text";
 import Title from "@/components/atoms/Title";
 import React from "react";
 
@@ -9,7 +8,7 @@ const Main04 = () => {
     <>
       <Title
         isUnderLine
-        className="pb-[52px] pt-[198px]"
+        className="pb-[52px] pt-[198px]" 
         text="우리가 만든 기억이에요"
         align="center"
       />

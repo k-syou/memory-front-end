@@ -1,9 +1,10 @@
-import Main01 from "@/components/modules/mainpage/Main01";
-import Main02 from "@/components/modules/mainpage/Main02";
-import Main03 from "@/components/modules/mainpage/Main03";
-import Main04 from "@/components/modules/mainpage/Main04";
 import Contact from "@/components/sections/Contact";
-import Main06 from "@/components/modules/mainpage/Main06";
+import Main01 from "@/components/sections/mainpage/Main01";
+import Main02 from "@/components/sections/mainpage/Main02";
+import Main03 from "@/components/sections/mainpage/Main03";
+import Main04 from "@/components/sections/mainpage/Main04";
+import Main06 from "@/components/sections/mainpage/Main06";
+
 export default function Home() {
   // 홈페이지
   return (
