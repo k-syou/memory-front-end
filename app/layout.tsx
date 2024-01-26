@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/modules/navigation/Navbar";
 import Footer from "@/components/sections/Footer";
-import Container from "@/components/atoms/Container";
 
 export const metadata: Metadata = {
   title: "Memory",

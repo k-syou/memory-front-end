@@ -1,4 +1,3 @@
-'use client'
 import React from 'react'
 import Container from './Container'
 import Text from './Text'
@@ -7,17 +6,17 @@ type Props = {
   isUnderLine : boolean
   text : string
   pt : string
-  mb : string
+  pb : string
   align? : "right"|"left"|"center"
 }
 const underLineCss = "border-b border-solid border-black box-border"
 
-const Title = ({isUnderLine, text, pt, mb, align}:Props) => {
+const Title = ({isUnderLine, text, pt, pb, align}:Props) => {
   align = align ? align : "left"
   return (
-    <div className={`h-auto w-full pt-[${pt}] ${(isUnderLine && underLineCss)}`}>
+    <div className={`w-full pt-[${pt}] pb-[${pb}] ${(isUnderLine ? underLineCss : "")}`}>
       <Container variant={"main"}>
-        <Text type="paragraph" variant={"web_h3"} className={`mb-[${mb}] text-${align}`}>{text}</Text>
+        <Text type="paragraph" variant={"web_h3"} className={`text-${align}`}>{text}</Text>
       </Container>
     </div>
   )

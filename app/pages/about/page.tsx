@@ -1,6 +1,7 @@
-import Contact from '@/components/sections/Contact'
-import AboutIntro from '@/components/sections/about/AboutIntro'
-import React from 'react'
+import Title from "@/components/atoms/Title";
+import Contact from "@/components/sections/Contact";
+import AboutIntro from "@/components/sections/about/AboutIntro";
+import React from "react";
 
 const About = () => {
   return (
@@ -8,7 +9,7 @@ const About = () => {
       <AboutIntro />
       <Contact />
     </>
-  )
-}
+  );
+};
 
-export default About
+export default About;
