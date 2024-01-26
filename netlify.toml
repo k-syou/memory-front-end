@@ -7,6 +7,3 @@
 
 [[plugins]]
   package = "netlify-plugin-cache-nextjs"
-
-[context.production.environment]
-  NETLIFY_NEXT_PLUGIN_SKIP = "true"
