@@ -1,6 +1,5 @@
 import Container from "@/components/atoms/Container";
 import NewCarousel from "@/components/atoms/NewCarousel";
-import SlideCarousel from "@/components/atoms/SlideCarousel";
 import Title from "@/components/atoms/Title";
 import React from "react";
 

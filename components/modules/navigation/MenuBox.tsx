@@ -7,7 +7,7 @@ type Props = {
   menuInfos: MenuInfos;
 };
 
-const MenuBox = ({ id, menuInfos }: Props) => {
+const MenuBox = ({id, menuInfos}: Props) => {
   const renderSubMenus = () => {
     let menuInfo = menuInfos.subMenuInfo;
     let menuLinks = menuInfos.subMenuLinks;
@@ -31,7 +31,7 @@ const MenuBox = ({ id, menuInfos }: Props) => {
   return (
     <div
       id={id}
-      className="hidden bg-gray w-full absolute top-20 right-0 border-solid border-x border-b border-black box-border flex pt-[30px]"
+      className="bg-gray w-full absolute top-20 right-0 border-solid border-x border-b border-black box-border flex pt-[30px]"
     >
       {renderSubMenus()}
     </div>

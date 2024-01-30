@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.carousel-next-icon,
+.carousel-prev-icon {
+  @apply text-[50px]
+}
+
 .swiper.swiper-initialized {
   @apply px-[142px] h-full
 }
@@ -14,6 +19,17 @@
 }
 .swiper .swiper-button-next {
   @apply right-0
+}
+
+/* border */
+.border-x-black {
+  @apply border-x border-black border-solid
+}
+.border-y-black {
+  @apply border-y border-black border-solid
+}
+.border-b-black {
+  @apply border-b border-black border-solid
 }
 
 /* Menu Button */

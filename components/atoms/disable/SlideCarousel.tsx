@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Image from "next/image";
-import Text from "./Text";
+import Text from "../Text";
 
 type Props = {
   spaceBetween: number;

@@ -1,17 +1,17 @@
-import Title from "@/components/atoms/Title";
 import Contact from "@/components/sections/Contact";
 import AboutIntro from "@/components/sections/about/AboutIntro";
+import RecruitActor from "@/components/sections/about/RecruitActor";
 import ActorsIntro from "@/components/sections/about/ActorsIntro";
-import React from "react";
 
 const About = () => {
   return (
     <>
       <AboutIntro />
       <ActorsIntro />
+      <RecruitActor />
       <Contact />
     </>
   );
 };
 
-export default About;
+export default About; 

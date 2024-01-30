@@ -8,17 +8,17 @@ type Props = {
   isUnderLine: boolean;
   text: string;
   className: string;
-  align?: "right" | "left" | "center";
+  align?: "text-right" | "text-left" | "text-center";
 };
 const underLineCss = "border-b border-solid border-black box-border";
 
 const Title = ({ isUnderLine, text, align, className}: Props) => {
-  align = align ? align : "left";
+  align = align ? align : "text-left";
   const commonClassNames = cn(`w-full ${isUnderLine ? underLineCss : ""}`, className);
   return (
     <div className={commonClassNames}>
       <Container variant={"main"}>
-        <Text type="paragraph" variant={"web_h3"} className={`text-${align}`}>
+        <Text type="paragraph" variant={"web_h3"} className={cn(`${align}`)}>
           {text}
         </Text>
       </Container>

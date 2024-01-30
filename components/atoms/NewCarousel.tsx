@@ -17,6 +17,7 @@ interface NewCarouselProps {
   pictureClassName: string;
   isPrevNextBtn?: boolean;
   isNextShowComponets?: boolean;
+  isLoop?: boolean;
 }
 const NewCarousel = ({
   images,
@@ -24,20 +25,21 @@ const NewCarousel = ({
   pictureClassName,
   isPrevNextBtn,
   isNextShowComponets,
+  isLoop,
 }: NewCarouselProps) => {
   return (
     <Carousel
-      className="flex justify-center items-center"
+      className="flex justify-center items-center relative"
       opts={{
-        loop: true,
+        loop: isLoop
       }}
       plugins={isAutoPlay ? [Autoplay({ delay: 2400 })] : []}
     >
-      <CarouselContent className="max-h-[1080px]">
+      <CarouselContent className="max-h-[1080px] w-full">
         {images.map((image, index) => (
           <CarouselItem
             key={index}
-            className="flex justify-center items-center content-center basis-auto"
+            className={cn("flex justify-center items-center content-center basis-auto overflow-hidden")}
           >
             <Image
               src={image}
@@ -45,21 +47,22 @@ const NewCarousel = ({
               className={cn(pictureClassName)}
               width={1920}
               height={1920}
+              priority
             />
           </CarouselItem>
         ))}
         {isNextShowComponets && (
           <CarouselItem
             className={cn(
-              "flex justify-center text-center items-center basis-auto"
+              "flex justify-center text-center items-center basis-auto overflow-hidden"
             )}
           >
-            <div className={cn("relative",pictureClassName)}>
+            <div className={cn("relative", pictureClassName)}>
               <Text
                 variant={"web_h5"}
                 type="paragraph"
                 className={cn(
-                  "absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]",
+                  "absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
                 )}
               >
                 👇
@@ -74,8 +77,8 @@ const NewCarousel = ({
       </CarouselContent>
       {isPrevNextBtn && (
         <>
-          <CarouselPrevious />
-          <CarouselNext />
+          <CarouselPrevious className="absolute left-0 h-full w-[110px] rounded-none border-y-0 bg-milky-white border-black hover:bg-black hover:text-milky-white" />
+          <CarouselNext className="absolute right-0 h-full w-[110px] rounded-none border-y-0 bg-milky-white border-black hover:bg-black hover:text-milky-white"/>
         </>
       )}
     </Carousel>

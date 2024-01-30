@@ -8,7 +8,7 @@ import React from "react";
 const AboutIntro = () => {
   const mainImage: StaticImport = require("@/public/images/mainImage01.jpg");
   return (
-    <>
+    <section id="about-intro">
       <Title
         isUnderLine={true}
         className="pb-[30px] pt-[142px]"
@@ -37,7 +37,7 @@ const AboutIntro = () => {
           </Text>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
