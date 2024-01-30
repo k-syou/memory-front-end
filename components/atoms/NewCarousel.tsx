@@ -62,13 +62,25 @@ const NewCarousel = ({
                 variant={"web_h5"}
                 type="paragraph"
                 className={cn(
-                  "absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
+                  "absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] sm:visible hidden"
                 )}
               >
                 👇
                 <br />
                 앞으로 만들어갈
                 <br />
+                기억들을 기대해 주세요
+              </Text>
+              <Text
+                variant={"web_caption"}
+                type="paragraph"
+                className={cn(
+                  "absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] sm:hidden visible"
+                )}
+              >
+                👇
+                <br />
+                앞으로 만들어갈
                 기억들을 기대해 주세요
               </Text>
             </div>

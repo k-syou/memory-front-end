@@ -6,7 +6,7 @@ const ContainerVariants = cva("", {
   variants: {
     variant: {
       default: "container w-full mx-auto",
-      main: "w-full sm:px-[124px]"
+      main: "w-full sm:px-[124px] px-[24px]"
     },
   },
   defaultVariants: {

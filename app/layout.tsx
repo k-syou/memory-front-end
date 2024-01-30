@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" className={`bg-milky-white relative`}>
-      <body className="max-w-[1920px] relative mx-auto">
+      <body className="max-w-[1920px] relative mx-auto break-keep">
         <Navbar />
         <main>{children}</main>
         <Footer />

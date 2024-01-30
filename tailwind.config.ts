@@ -20,7 +20,7 @@ const config: Config = {
       },
     },
     fontSize: {
-      "4xl": ["96px", "128px"],
+      "4xl": ["96px", "128px"], 
       "3xl": ["64px", "80px"],
       "2xl": ["48px", "56px"],
       xl: ["32px", "40px"],
