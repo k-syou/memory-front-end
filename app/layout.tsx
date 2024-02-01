@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/modules/navigation/Navbar";
 import Footer from "@/components/sections/Footer";
+import Navbar from "@/components/modules/navigation/Navbar";
 
 export const metadata: Metadata = {
   title: "Memory",
@@ -14,12 +14,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className={`bg-milky-white relative`}>
+    <html lang="ko" className={`bg-gray100 relative`}>
       <body className="max-w-[1920px] relative mx-auto break-keep">
         <Navbar />
         <main>{children}</main>
-        <Footer />
-      </body>
+        {/* <Footer /> */}
+      </body> 
     </html>
   );
 }

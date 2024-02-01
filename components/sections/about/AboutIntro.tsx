@@ -1,5 +1,5 @@
 "use client";
-import Text from "@/components/atoms/Text";
+import Text from "@/components/atoms/disable/Text";
 import Title from "@/components/atoms/Title";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";

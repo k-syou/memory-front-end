@@ -1,4 +1,4 @@
-import Container from "@/components/atoms/Container";
+import Container from "@/components/atoms/disable/Container";
 import NewCarousel from "@/components/atoms/NewCarousel";
 import Title from "@/components/atoms/Title";
 

@@ -1,4 +1,4 @@
-import Container from "@/components/atoms/Container";
+import Container from "@/components/atoms/disable/Container";
 import Title from "@/components/atoms/Title";
 import Image from "next/image";
 import React from "react";

@@ -6,10 +6,12 @@ import MenuBox from "./MenuBox";
 import Text from "@/components/atoms/Text";
 import Button from "@/components/atoms/Button";
 import { IoMenuOutline } from "react-icons/io5";
+import Section from "@/components/atoms/Section";
+import Container from "@/components/atoms/Container";
 
 const menuInfos: MenuInfos = {
   mainMenuNames: ["극단 기억", "극단 소식", "극단 앨범"],
-  mainMenuLinks: ["/pages/about","#","#"],
+  mainMenuLinks: ["/pages/about", "#", "#"],
   subMenuInfo: [
     ["극단 소개", "단원 소개", "단원 모집"],
     ["공지사항", "연습일지"],
@@ -53,14 +55,14 @@ const Navbar = () => {
           className="float-left w-40 h-full flex items-center justify-center"
           key={idx}
         >
-          <Text type="link" url={menuInfos.mainMenuLinks[idx]} variant={"web_h6"}>
+          <Text type="link" url={menuInfos.mainMenuLinks[idx]} className="sm:leading-[56px] md:leading-[56px] leading-[80px]">
             {menu}
           </Text>
         </li>
       );
     });
     return (
-      <ul id="nav-items" className="right-0 h-full absolute mr-5">
+      <ul id="nav-items" className="right-0 h-full mr-5 relative">
         {mainMenuItems}
         {viewMenuBox && <MenuBox menuInfos={menuInfos} id="menu-box" />}
       </ul>
@@ -69,17 +71,33 @@ const Navbar = () => {
 
   return (
     <>
-      <nav
-        className={`fixed top-0 w-full sm:h-20 h-14 border-b border-solid box-border border-black bg-milky-white z-50 max-w-[1920px]`}
+    {/* Navbar */}
+      <Section
+        border={"bottom"}
+        className="h-20 lg:h-20 md:h-14 sm:h-14 w-full bg-gray100 z-50"
       >
-        <div className="absolute h-full sm:w-[124px] w-[93px] align-middle text-center sm:leading-[80px] leading-[56px] cursor-pointer" onClick={() => route.push("/")}>LOGO</div>
-        <div className="h-full flex justify-end sm:hidden">
-          <Button className="w-14 h-14">
-            <IoMenuOutline className="text-lg mx-auto" />
-          </Button></div>
-        <div className="h-full hidden justify-end sm:flex">{renderMainMenuItems()}</div>
-      </nav>
-      <div className="h-20"></div>
+        <Container className="relative">
+
+          {/* Logo */}
+          <div
+            className="absolute h-full sm:w-[93px] md:w-[93px] w-[124px] align-middle text-center sm:leading-[56px] md:leading-[56px] leading-[80px] cursor-pointer"
+            onClick={() => route.push("/")}
+          >
+            LOGO
+          </div>
+
+          {/* Menu Bar (Window Width > 1020) */}
+          <div className="h-full flex justify-end md:hidden sm:hidden">{renderMainMenuItems()}</div>
+
+          {/* Menu Button (Window Width < 1020) */}
+          <div className="h-full hidden justify-end sm:flex md:flex">
+            <Button className="w-14 h-14">
+              <IoMenuOutline className="text-lg mx-auto" />
+            </Button>
+          </div>
+
+        </Container>
+      </Section>
     </>
   );
 };

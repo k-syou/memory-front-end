@@ -1,5 +1,5 @@
 import React from "react";
-import Text from "../atoms/Text";
+import Text from "../atoms/disable/Text";
 
 const Footer = () => {
   return (

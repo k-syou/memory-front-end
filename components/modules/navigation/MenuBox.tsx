@@ -1,4 +1,4 @@
-import Text from "@/components/atoms/Text";
+import Text from "@/components/atoms/disable/Text";
 import React from "react";
 import { MenuInfos } from "./Navbar.d";
 

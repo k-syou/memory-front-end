@@ -1,6 +1,6 @@
 "use client";
-import Container from "@/components/atoms/Container";
-import Text from "@/components/atoms/Text";
+import Container from "@/components/atoms/disable/Container";
+import Text from "@/components/atoms/disable/Text";
 import NewCarousel from "@/components/atoms/NewCarousel";
 import Button from "@/components/atoms/Button";
 import Title from "@/components/atoms/Title";

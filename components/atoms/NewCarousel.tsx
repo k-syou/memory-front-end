@@ -9,7 +9,7 @@ import {
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
 import { cn } from "@/lib/utils";
-import Text from "./Text";
+import Text from "./disable/Text";
 
 interface NewCarouselProps {
   images: string[];

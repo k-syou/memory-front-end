@@ -1,4 +1,4 @@
-import Text from "@/components/atoms/Text";
+import Text from "@/components/atoms/disable/Text";
 import { motion as m } from "framer-motion";
 import React from "react";
 type Props = {

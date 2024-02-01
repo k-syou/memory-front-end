@@ -1,5 +1,5 @@
-import Container from '@/components/atoms/Container'
-import Text from '@/components/atoms/Text'
+import Container from '@/components/atoms/disable/Container'
+import Text from '@/components/atoms/disable/Text'
 import React from 'react'
 import { CiMail } from "react-icons/ci";
 import { CiInstagram } from "react-icons/ci";

@@ -5,7 +5,7 @@ import { forwardRef } from "react";
 
 // text variants
 // class name values from figma
-const ButtonVariants = cva("border border-solid border-black box-border text-black hover:text-milky-white bg-milky-white hover:bg-black", {
+const ButtonVariants = cva("border border-solid border-black box-border text-black hover:text-gray100 bg-gray100 hover:bg-black", {
   variants: {
     variant: {
       default: "", 

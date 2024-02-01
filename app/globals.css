@@ -7,30 +7,6 @@
   @apply text-[50px]
 }
 
-.swiper.swiper-initialized {
-  @apply px-[142px] h-full
-}
-.swiper .swiper-button-prev,
-.swiper .swiper-button-next {
-  @apply h-full w-[110px] bg-milky-white top-[22px] border-x border-solid border-black text-black box-border
-}
-.swiper .swiper-button-prev {
-  @apply left-0
-}
-.swiper .swiper-button-next {
-  @apply right-0
-}
-
-/* border */
-.border-x-black {
-  @apply border-x border-black border-solid
-}
-.border-y-black {
-  @apply border-y border-black border-solid
-}
-.border-b-black {
-  @apply border-b border-black border-solid
-}
 
 /* Menu Button */
 .menu-btn {
@@ -46,10 +22,9 @@
   @apply absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%];
 }
 
-.side-bar {
+/* .side-bar {
   @apply fixed left-0 top-0 z-10 text-gray pb-[80px]
-  /* @apply fixed left-0 top-0 z-10 bg-black text-gray transition-all duration-500 */;
-}
+} */
 
 /* import fonts */
 @font-face {
