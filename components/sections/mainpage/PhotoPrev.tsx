@@ -1,12 +1,11 @@
 import Container from "@/components/atoms/Container";
 import NewCarousel from "@/components/atoms/NewCarousel";
-import SlideCarousel from "@/components/atoms/disable/SlideCarousel";
 import React from "react";
 
-const Main06 = () => {
+const PhotoPrev = () => {
   return (
-    <div className="h-auto border-b border-solid border-black w-full box-border">
-      <Container variant={"main"} className="h-[500px]">
+    <div className="h-auto sm:border-b sm:border-solid sm:border-black w-full box-border">
+      <Container variant={"main"} className="sm:h-[500px] h-[193px]">
         <NewCarousel
           images={[
             "/images/photos/p1.jpg",
@@ -15,7 +14,7 @@ const Main06 = () => {
             "/images/photos/p4.jpg",
             "/images/photos/p5.jpg",
           ]}
-          pictureClassName="h-[500px] w-auto"
+          pictureClassName="sm:h-[500px] h-[193px] w-auto"
           isAutoPlay
         />
       </Container>
@@ -23,4 +22,4 @@ const Main06 = () => {
   );
 };
 
-export default Main06;
+export default PhotoPrev;

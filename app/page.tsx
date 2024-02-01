@@ -1,20 +1,20 @@
 import Contact from "@/components/sections/Contact";
-import Main01 from "@/components/sections/mainpage/Main01";
-import Main02 from "@/components/sections/mainpage/Main02";
-import Main03 from "@/components/sections/mainpage/Main03";
-import Main04 from "@/components/sections/mainpage/Main04";
-import Main06 from "@/components/sections/mainpage/Main06";
+import MainTitle from "@/components/sections/mainpage/MainTitle";
+import SubContents from "@/components/sections/mainpage/SubContents";
+import MemberPrev from "@/components/sections/mainpage/MemberPrev";
+import PlayPrev from "@/components/sections/mainpage/PlayPrev";
+import PhotoPrev from "@/components/sections/mainpage/PhotoPrev";
 
 export default function Home() {
   // 홈페이지
   return (
     <>
-      <Main01 />
-      <Main02 />
-      <Main03 />
-      <Main04 />
+      <MainTitle />
+      <SubContents />
+      <MemberPrev />
+      <PlayPrev />
       <Contact />
-      <Main06 />
+      <PhotoPrev />
     </>
   );
 }
