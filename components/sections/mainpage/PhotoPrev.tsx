@@ -1,11 +1,11 @@
-import Container from "@/components/atoms/disable/Container";
+import Container from "@/components/atoms/Container";
 import NewCarousel from "@/components/atoms/NewCarousel";
 import React from "react";
 
 const PhotoPrev = () => {
   return (
     <div className="h-auto sm:border-b sm:border-solid sm:border-black w-full box-border">
-      <Container variant={"main"} className="sm:h-[500px] h-[193px]">
+      <Container className="sm:h-[500px] h-[193px]">
         <NewCarousel
           images={[
             "/images/photos/p1.jpg",

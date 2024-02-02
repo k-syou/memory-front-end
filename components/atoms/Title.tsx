@@ -11,13 +11,14 @@ type Props = {
   className: string;
   align?: "text-right" | "text-left" | "text-center";
   textClassName: string;
+  containerClassName?: string;
 };
 
-const Title = ({ isUnderLine, text, align, className, textClassName}: Props) => {
+const Title = ({ isUnderLine, text, align, className, textClassName, containerClassName}: Props) => {
   align = align ? align : "text-left";
   return (
     <Section border={isUnderLine ? "bottom" : "default"} className={className}>
-      <Container className="relative">
+      <Container className={cn(containerClassName,"relative")}>
         <Text type="paragraph" className={cn(align, "block", textClassName)}>
           {text}
         </Text>

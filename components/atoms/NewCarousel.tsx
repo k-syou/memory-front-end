@@ -7,9 +7,9 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image from "next/image";
-import Autoplay from "embla-carousel-autoplay";
 import { cn } from "@/lib/utils";
 import Text from "./disable/Text";
+import Autoplay from "embla-carousel-autoplay";
 
 interface NewCarouselProps {
   images: string[];
@@ -27,19 +27,22 @@ const NewCarousel = ({
   isNextShowComponets,
   isLoop,
 }: NewCarouselProps) => {
+
   return (
     <Carousel
       className="flex justify-center items-center relative"
       opts={{
-        loop: isLoop
+        loop: isLoop,
       }}
-      plugins={isAutoPlay ? [Autoplay({ delay: 2400 })] : []}
+      plugins={[Autoplay({ delay: 3000, active: isAutoPlay  })]}
     >
       <CarouselContent className="max-h-[1080px] w-full">
         {images.map((image, index) => (
           <CarouselItem
             key={index}
-            className={cn("flex justify-center items-center content-center basis-auto overflow-hidden")}
+            className={cn(
+              "flex justify-center items-center content-center basis-auto overflow-hidden"
+            )}
           >
             <Image
               src={image}
@@ -80,8 +83,7 @@ const NewCarousel = ({
               >
                 👇
                 <br />
-                앞으로 만들어갈
-                기억들을 기대해 주세요
+                앞으로 만들어갈 기억들을 기대해 주세요
               </Text>
             </div>
           </CarouselItem>
@@ -89,8 +91,8 @@ const NewCarousel = ({
       </CarouselContent>
       {isPrevNextBtn && (
         <>
-          <CarouselPrevious className="absolute left-0 h-full w-[110px] rounded-none border-y-0 bg-milky-white border-black hover:bg-black hover:text-milky-white" />
-          <CarouselNext className="absolute right-0 h-full w-[110px] rounded-none border-y-0 bg-milky-white border-black hover:bg-black hover:text-milky-white"/>
+          <CarouselPrevious className="absolute left-0 h-full w-[110px] rounded-none border-y-0 bg-gray100 border-black hover:bg-black hover:text-gray100" />
+          <CarouselNext className="absolute right-0 h-full w-[110px] rounded-none border-y-0 bg-gray100 border-black hover:bg-black hover:text-gray100" />
         </>
       )}
     </Carousel>

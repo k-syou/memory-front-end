@@ -10,8 +10,9 @@ const MainTitle = () => {
     <>
       <Title
         isUnderLine={false}
-        className="pt-[80px] pb-[40px] sm:mx-6"
+        className="pt-[80px] pb-[40px]"
         text="극단 기억에 오신 것을 환영합니다."
+        containerClassName="sm:px-[24px]"
         textClassName="md:text-h4 text-h3 sm:w-[200px] w-full"
       />
       <Section border={"bottom"}>
