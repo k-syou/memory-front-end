@@ -1,4 +1,4 @@
-import Container from "@/components/atoms/disable/Container";
+import Container from "@/components/atoms/Container";
 import Title from "@/components/atoms/Title";
 import Image from "next/image";
 import React from "react";
@@ -23,12 +23,13 @@ const ActorsIntro = () => {
   return (
     <section id="actors-intro">
       <Title
+        textClassName=""
         isUnderLine={true}
         className="pb-[40px] pt-[180px]"
         text="우리를 소개할게요"
       />
       <div className="border-b border-solid border-black w-full box-border mx-auto">
-        <Container variant={"main"} className="w-full grid grid-cols-6 place-items-center gap-y-[72px]">
+        <Container className="w-full grid grid-cols-6 place-items-center gap-y-[72px]">
           {photoData.map((value, idx) => {
             let is_border_t = idx > 5;
             return (
