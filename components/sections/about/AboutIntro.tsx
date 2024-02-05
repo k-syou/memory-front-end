@@ -1,5 +1,5 @@
 "use client";
-import Text from "@/components/atoms/disable/Text";
+import Text from "@/components/atoms/Text";
 import Title from "@/components/atoms/Title";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
@@ -10,6 +10,7 @@ const AboutIntro = () => {
   return (
     <section id="about-intro">
       <Title
+        textClassName=""
         isUnderLine={true}
         className="pb-[30px] pt-[142px]"
         text="안녕하세요, 극단 기억입니다."
@@ -19,10 +20,10 @@ const AboutIntro = () => {
           <Image src={mainImage} alt="이미지" className="img"></Image>
         </div>
         <div className="h-[697px] flex flex-col pl-8 pt-[70px]">
-          <Text variant={"web_h4"} className="block mb-6">
+          <Text className="block mb-6">
             소중한 기억을 만들어 갑니다.
           </Text>
-          <Text variant={"web_h6"} className="block">
+          <Text className="block">
             극단 기억은 무대 위에서 감동과 웃음을 나누는 뮤지컬/연극
             동호회입니다.
             <br />
