@@ -14,7 +14,7 @@ export default function Home() {
       <MemberPrev />
       <PlayPrev />
       <Contact />
-      {/* <PhotoPrev /> */}
+      <PhotoPrev />
     </>
   );
 }

@@ -5,7 +5,7 @@ import { forwardRef } from "react";
 
 // text variants
 // class name values from figma
-const TextVariants = cva("tracking-normal transition-all duration-300", {
+const TextVariants = cva("tracking-normal", {
   variants: {
     language: {
       ko: "font-ko",

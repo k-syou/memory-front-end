@@ -52,7 +52,7 @@ const Navbar = () => {
     let mainMenuItems = menuInfos.mainMenuNames.map((menu, idx) => {
       return (
         <li
-          className="float-left w-40 h-full flex items-center justify-center"
+          className="float-left w-40 md:w-[113px] h-full flex items-center justify-center"
           key={idx}
         >
           <Text type="link" url={menuInfos.mainMenuLinks[idx]} className="sm:leading-[56px] md:leading-[56px] leading-[80px]">
@@ -74,7 +74,7 @@ const Navbar = () => {
     {/* Navbar */}
       <Section
         border={"bottom"}
-        className="h-20 lg:h-20 md:h-14 sm:h-14 w-full bg-gray100 z-50"
+        className="h-20 lg:h-20 md:h-14 sm:h-14 w-full bg-gray100 z-50 overflow-visible"
       >
         <Container className="relative">
 
@@ -86,11 +86,11 @@ const Navbar = () => {
             LOGO
           </div>
 
-          {/* Menu Bar (Window Width > 1020) */}
-          <div className="h-full flex justify-end md:hidden sm:hidden">{renderMainMenuItems()}</div>
+          {/* 데스크탑, 테블릿 */}
+          <div className="h-full flex justify-end sm:hidden">{renderMainMenuItems()}</div>
 
-          {/* Menu Button (Window Width < 1020) */}
-          <div className="h-full hidden justify-end sm:flex md:flex">
+          {/* 스마트폰 */}
+          <div className="h-full hidden justify-end sm:flex">
             <Button className="w-14 h-14">
               <IoMenuOutline className="text-lg mx-auto" />
             </Button>

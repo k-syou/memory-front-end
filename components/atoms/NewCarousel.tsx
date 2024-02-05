@@ -81,8 +81,8 @@ const NewCarousel = ({
       </CarouselContent>
       {isPrevNextBtn ? (
         <>
-          <CarouselPrevious className="absolute left-0 h-full w-[110px] rounded-none border-y-0 bg-gray100 border-black hover:bg-black hover:text-gray100" />
-          <CarouselNext className="absolute right-0 h-full w-[110px] rounded-none border-y-0 bg-gray100 border-black hover:bg-black hover:text-gray100" />
+          <CarouselPrevious className="absolute left-0 h-full w-[110px] md:w-[58px] rounded-none border-y-0 bg-gray100 border-black hover:bg-black hover:text-gray100" />
+          <CarouselNext className="absolute right-0 h-full w-[110px] md:w-[58px] rounded-none border-y-0 bg-gray100 border-black hover:bg-black hover:text-gray100" />
         </>
       ): <></>}
     </Carousel>

@@ -42,14 +42,16 @@ const MemberPrev = () => {
       />
       <Section border={"bottom"}>
         <Container className="relative h-full">
+          {/* 테블릿, 데스크탑 캐러셀 */}
           <NewCarousel
             images={photoData}
-            pictureClassName="h-[315px] w-[230px] border-x border-solid border-black"
+            pictureClassName="h-[315px] w-[230px] md:h-[256px] md:w-[186px] border-x border-solid border-black"
             className="sm:hidden block"
             isPrevNextBtn
             isAutoPlay
             isLoop
           />
+          {/* 모바일 캐러셀 */}
           <NewCarousel
             images={photoData}
             pictureClassName="h-[200px] w-[150px] border-x border-solid border-black"

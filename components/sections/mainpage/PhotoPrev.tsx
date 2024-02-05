@@ -1,11 +1,12 @@
 import Container from "@/components/atoms/Container";
 import NewCarousel from "@/components/atoms/NewCarousel";
+import Section from "@/components/atoms/Section";
 import React from "react";
 
 const PhotoPrev = () => {
   return (
-    <div className="h-auto sm:border-b sm:border-solid sm:border-black w-full box-border">
-      <Container className="sm:h-[500px] h-[193px]">
+    <Section border={"bottom"}>
+      <Container className="h-auto">
         <NewCarousel
           images={[
             "/images/photos/p1.jpg",
@@ -14,11 +15,12 @@ const PhotoPrev = () => {
             "/images/photos/p4.jpg",
             "/images/photos/p5.jpg",
           ]}
-          pictureClassName="sm:h-[500px] h-[193px] w-auto"
+          pictureClassName="h-[441px] sm:h-[193px] w-auto"
           isAutoPlay
+          isLoop
         />
       </Container>
-    </div>
+    </Section>
   );
 };
 
