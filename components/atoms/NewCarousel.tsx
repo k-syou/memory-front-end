@@ -7,9 +7,9 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image from "next/image";
-import Autoplay from "embla-carousel-autoplay";
 import { cn } from "@/lib/utils";
 import Text from "./Text";
+import Autoplay from "embla-carousel-autoplay";
 
 interface NewCarouselProps {
   images: string[];
@@ -18,6 +18,7 @@ interface NewCarouselProps {
   isPrevNextBtn?: boolean;
   isNextShowComponets?: boolean;
   isLoop?: boolean;
+  className?: string;
 }
 const NewCarousel = ({
   images,
@@ -26,20 +27,24 @@ const NewCarousel = ({
   isPrevNextBtn,
   isNextShowComponets,
   isLoop,
+  className
 }: NewCarouselProps) => {
+
   return (
     <Carousel
-      className="flex justify-center items-center relative"
+      className={cn("flex justify-center items-center relative", className)}
       opts={{
-        loop: isLoop
+        loop: isLoop,
       }}
-      plugins={isAutoPlay ? [Autoplay({ delay: 2400 })] : []}
+      plugins={[Autoplay({ delay: 3000, active: isAutoPlay  })]}
     >
       <CarouselContent className="max-h-[1080px] w-full">
         {images.map((image, index) => (
           <CarouselItem
             key={index}
-            className={cn("flex justify-center items-center content-center basis-auto overflow-hidden")}
+            className={cn(
+              "flex justify-center items-center content-center basis-auto overflow-hidden"
+            )}
           >
             <Image
               src={image}
@@ -59,40 +64,27 @@ const NewCarousel = ({
           >
             <div className={cn("relative", pictureClassName)}>
               <Text
-                variant={"web_h5"}
                 type="paragraph"
                 className={cn(
-                  "absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] sm:visible hidden"
+                  "absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-h6 sm:text-caption"
                 )}
               >
                 👇
                 <br />
                 앞으로 만들어갈
                 <br />
-                기억들을 기대해 주세요
-              </Text>
-              <Text
-                variant={"web_caption"}
-                type="paragraph"
-                className={cn(
-                  "absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] sm:hidden visible"
-                )}
-              >
-                👇
-                <br />
-                앞으로 만들어갈
                 기억들을 기대해 주세요
               </Text>
             </div>
           </CarouselItem>
         )}
       </CarouselContent>
-      {isPrevNextBtn && (
+      {isPrevNextBtn ? (
         <>
-          <CarouselPrevious className="absolute left-0 h-full w-[110px] rounded-none border-y-0 bg-milky-white border-black hover:bg-black hover:text-milky-white" />
-          <CarouselNext className="absolute right-0 h-full w-[110px] rounded-none border-y-0 bg-milky-white border-black hover:bg-black hover:text-milky-white"/>
+          <CarouselPrevious className="absolute left-0 h-full w-[110px] md:w-[58px] rounded-none border-y-0 bg-gray100 border-black hover:bg-black hover:text-gray100" />
+          <CarouselNext className="absolute right-0 h-full w-[110px] md:w-[58px] rounded-none border-y-0 bg-gray100 border-black hover:bg-black hover:text-gray100" />
         </>
-      )}
+      ): <></>}
     </Carousel>
   );
 };

@@ -17,7 +17,7 @@ const MenuBox = ({id, menuInfos}: Props) => {
           {info.map((text, idx2) => {
             return (
               <li key={`sub-item-${idx2}`} className="mb-[30px]">
-                <Text variant={"web_h6"} type="link" url={menuLinks[idx][idx2]}>
+                <Text className="text-b1" type="link" url={menuLinks[idx][idx2]}>
                   {text}
                 </Text>
               </li>
@@ -31,7 +31,7 @@ const MenuBox = ({id, menuInfos}: Props) => {
   return (
     <div
       id={id}
-      className="bg-gray w-full absolute top-20 right-0 border-solid border-x border-b border-black box-border flex pt-[30px]"
+      className="bg-gray200 w-full absolute top-20 md:top-14 right-0 border-solid border-x border-b border-black box-border flex pt-[30px] z-50"
     >
       {renderSubMenus()}
     </div>

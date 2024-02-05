@@ -4,7 +4,7 @@ import { forwardRef } from "react";
 
 // text variants
 // class name values from figma
-const TextVariants = cva("box-border border-solid", {
+const SectionVariants = cva("box-border border-solid min-w-[360px] overflow-hidden", {
   variants: {
     border: {
       default: "",
@@ -26,16 +26,16 @@ const TextVariants = cva("box-border border-solid", {
   },
 });
 
-export interface SectionPropsProps
+export interface SectionProps
   extends React.HTMLAttributes<HTMLParagraphElement | HTMLHeadingElement>,
-    VariantProps<typeof TextVariants> {
+    VariantProps<typeof SectionVariants> {
 }
 
 const Section = forwardRef<
   HTMLParagraphElement | HTMLHeadingElement,
-  SectionPropsProps
->(({ className, border, borderColor, children, type, url, ...props }, ref) => {
-  return <section className={cn()}>{children}</section>;
+  SectionProps
+>(({ className, border, borderColor, children, ...props }, ref) => {
+  return <section id={props.id} className={cn(SectionVariants({className, border, borderColor}))}>{children}</section>;
 });
 Section.displayName = "Section";
 

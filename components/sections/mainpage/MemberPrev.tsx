@@ -4,6 +4,7 @@ import Text from "@/components/atoms/Text";
 import NewCarousel from "@/components/atoms/NewCarousel";
 import Button from "@/components/atoms/Button";
 import Title from "@/components/atoms/Title";
+import Section from "@/components/atoms/Section";
 
 const photoData = [
   "/images/actors/프사_지은.png",
@@ -19,53 +20,48 @@ const photoData = [
 
 const MemberPrev = () => {
   return (
-    <div className="h-auto border-b border-solid border-black w-full box-border">
+    <>
       <Title
-        className="pt-[188px] pb-[56px]"
+        textClassName="text-h3 sm:text-h4 sm:w-[140px]"
+        className="pt-[160px] sm:pt-12 pb-[40px] sm:pb-6"
+        containerClassName="sm:px-[24px]"
         text={
           <>
             우리를 소개할게요
-            <Button variant={"navbarBtn"} className="absolute sm:right-[124px] right-[24px]">
-              <Text type="paragraph" variant={"web_h6"}>
-                전체 보기
+            <Button
+              variant={"navbarBtn"}
+              className="absolute right-0 top-[50%] translate-y-[-50%]"
+            >
+              <Text type="paragraph" className="text-b1 sm:text-caption">
+                전체보기
               </Text>
             </Button>
           </>
         }
+        isUnderLine
       />
-      {/* <Container variant={"main"}>
-        <div className="flex justify-between items-center mb-[56px]">
-          <Text type="paragraph" variant={"web_h3"} className="">
-            우리를 소개할게요
-          </Text>
-          <Button variant={"navbarBtn"}><Text type="paragraph" variant={"web_h6"}>전체 보기</Text></Button>
-        </div>
-      </Container> */}
-      <div className="h-auto border-b border-solid border-black w-full box-border "></div>
-
-      <Container
-        variant={"main"}
-        className="relative h-[345px] sm:block hidden"
-      >
-        <NewCarousel
-          images={photoData}
-          pictureClassName="h-[345px] w-[252px] border-x border-solid border-black"
-          isPrevNextBtn
-          isAutoPlay
-          isLoop
-        />
-      </Container>
-      <div
-        className="relative h-[199px] sm:hidden block"
-      >
-        <NewCarousel
-          images={photoData}
-          pictureClassName="h-[199px] w-[148px] border-x border-solid border-black"
-          isAutoPlay
-          isLoop
-        />
-      </div>
-    </div>
+      <Section border={"bottom"}>
+        <Container className="relative h-full">
+          {/* 테블릿, 데스크탑 캐러셀 */}
+          <NewCarousel
+            images={photoData}
+            pictureClassName="h-[315px] w-[230px] md:h-[256px] md:w-[186px] border-x border-solid border-black"
+            className="sm:hidden block"
+            isPrevNextBtn
+            isAutoPlay
+            isLoop
+          />
+          {/* 모바일 캐러셀 */}
+          <NewCarousel
+            images={photoData}
+            pictureClassName="h-[200px] w-[150px] border-x border-solid border-black"
+            className="sm:block hidden"
+            isAutoPlay
+            isLoop
+          />
+        </Container>
+      </Section>
+    </>
   );
 };
 
