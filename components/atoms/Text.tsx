@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { VariantProps, cva } from "class-variance-authority";
+import Link from "next/link";
 import { forwardRef } from "react";
 
 // text variants
@@ -41,13 +42,13 @@ const Text = forwardRef<HTMLParagraphElement | HTMLHeadingElement, TextProps>(
         url = "/";
       }
       return (
-        <a
+        <Link
           id={props.id}
           className={cn(TextVariants({ language, className }))}
           href={String(url!)}
         >
           {children}
-        </a>
+        </Link>
       );
     } else {
       return (

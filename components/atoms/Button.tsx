@@ -9,7 +9,7 @@ const ButtonVariants = cva("border border-solid border-black box-border text-bla
   variants: {
     variant: {
       default: "", 
-      navbarBtn: "py-2 px-[22px] rounded-[78px]", 
+      navbarBtn: "py-2 px-[22px] sm:px-3 rounded-[78px] sm:rounded-[20px]", 
       backToListBtn: "py-2 px-[16px] rounded-[78px]",
       circleBtn:"rounded-full"
     }, 

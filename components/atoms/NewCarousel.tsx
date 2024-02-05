@@ -18,6 +18,7 @@ interface NewCarouselProps {
   isPrevNextBtn?: boolean;
   isNextShowComponets?: boolean;
   isLoop?: boolean;
+  className?: string;
 }
 const NewCarousel = ({
   images,
@@ -26,11 +27,12 @@ const NewCarousel = ({
   isPrevNextBtn,
   isNextShowComponets,
   isLoop,
+  className
 }: NewCarouselProps) => {
 
   return (
     <Carousel
-      className="flex justify-center items-center relative"
+      className={cn("flex justify-center items-center relative", className)}
       opts={{
         loop: isLoop,
       }}
@@ -89,12 +91,12 @@ const NewCarousel = ({
           </CarouselItem>
         )}
       </CarouselContent>
-      {isPrevNextBtn && (
+      {isPrevNextBtn ? (
         <>
           <CarouselPrevious className="absolute left-0 h-full w-[110px] rounded-none border-y-0 bg-gray100 border-black hover:bg-black hover:text-gray100" />
           <CarouselNext className="absolute right-0 h-full w-[110px] rounded-none border-y-0 bg-gray100 border-black hover:bg-black hover:text-gray100" />
         </>
-      )}
+      ): <></>}
     </Carousel>
   );
 };

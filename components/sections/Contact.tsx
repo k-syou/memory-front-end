@@ -1,22 +1,45 @@
-import Container from '@/components/atoms/Container'
-import Text from '@/components/atoms/disable/Text'
-import React from 'react'
+import Container from "@/components/atoms/Container";
+import React from "react";
 import { CiMail } from "react-icons/ci";
 import { CiInstagram } from "react-icons/ci";
-import Button from '../atoms/Button';
+import Button from "../atoms/Button";
+import Section from "../atoms/Section";
+import Title from "../atoms/Title";
+
+// Mail, Insta 버튼 ClassName
+const btnClassName = "w-[140px] h-[140px] sm:w-[77px] sm:h-[77px] justify-center flex";
+const iconClassName = "my-auto w-14 h-14 sm:w-8 sm:h-8";
+
 const Contact = () => {
   return (
-    <div className="h-auto sm:border-b sm:border-solid sm:border-black w-full box-border sm:pt-[200px] pt-[32px] sm:pb-0 pb-10">
-      <Container className='flex justify-center flex-col mx-auto items-center'>
-        <Text type="paragraph" variant={"web_h3"} className="mb-[54px] sm:block hidden">기억이 궁금하시다면,</Text>
-        <Text type="paragraph" variant={"web_h4"} className="mb-[21px] sm:hidden block text-center">기억이 궁금하시다면,</Text>
-        <div className='flex sm:mt-10 sm:mb-16 mb-10 sm:gap-[60px] gap-[18px]'>
-          <Button variant={'circleBtn'} className='sm:h-[160px] h-[81px] sm:w-[160px] w-[81px] justify-center flex'><CiMail className='my-auto sm:h-16 h-8 sm:w-16 w-8'/></Button>
-          <Button variant={'circleBtn'} className='sm:h-[160px] h-[81px] sm:w-[160px] w-[81px] justify-center flex'><CiInstagram className='my-auto sm:h-16 h-8 sm:w-16 w-8'/></Button>
-        </div>
-      </Container>
-    </div>
-  )
-}
+    <>
+      <Title
+        text={"기억이 궁금하시다면,"}
+        className="mt-[160px] md:mt-[120px] sm:mt-12 mb-10 md:mb-8 sm:mb-6"
+        textClassName="text-h3 sm:text-h4 sm:max-w-[175px] sm:mx-auto"
+        align="text-center"
+      />
 
-export default Contact
+      <Section border={"bottom"} className="pb-20 sm:pb-[60px]">
+        <Container className="flex justify-center mx-auto items-center gap-8 sm:gap-[18px]">
+          {/* 메일버튼 */}
+          <Button
+            variant={"circleBtn"}
+            className={btnClassName}
+          >
+            <CiMail className={iconClassName} />
+          </Button>
+          {/* 인스타버튼 */}
+          <Button
+            variant={"circleBtn"}
+            className={btnClassName}
+          >
+            <CiInstagram className={iconClassName} />
+          </Button>
+        </Container>
+      </Section>
+    </>
+  );
+};
+
+export default Contact;
