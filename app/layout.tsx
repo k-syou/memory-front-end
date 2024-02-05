@@ -18,7 +18,7 @@ export default function RootLayout({
       <body className="max-w-[1920px] relative mx-auto break-keep">
         <Navbar />
         <main>{children}</main>
-        {/* <Footer /> */}
+        <Footer />
       </body> 
     </html>
   );

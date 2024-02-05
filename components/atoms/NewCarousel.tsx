@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import Text from "./disable/Text";
+import Text from "./Text";
 import Autoplay from "embla-carousel-autoplay";
 
 interface NewCarouselProps {
@@ -64,10 +64,9 @@ const NewCarousel = ({
           >
             <div className={cn("relative", pictureClassName)}>
               <Text
-                variant={"web_h5"}
                 type="paragraph"
                 className={cn(
-                  "absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] sm:visible hidden"
+                  "absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-h6 sm:text-caption"
                 )}
               >
                 👇
@@ -75,17 +74,6 @@ const NewCarousel = ({
                 앞으로 만들어갈
                 <br />
                 기억들을 기대해 주세요
-              </Text>
-              <Text
-                variant={"web_caption"}
-                type="paragraph"
-                className={cn(
-                  "absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] sm:hidden visible"
-                )}
-              >
-                👇
-                <br />
-                앞으로 만들어갈 기억들을 기대해 주세요
               </Text>
             </div>
           </CarouselItem>
