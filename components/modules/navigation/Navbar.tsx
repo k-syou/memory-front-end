@@ -15,7 +15,7 @@ const menuInfos: MenuInfos = {
   mainMenuNames: ["극단 기억", "극단 소식", "극단 앨범"],
   mainMenuLinks: ["/about", "#", "#"],
   subMenuInfo: [
-    ["극단 소개", "단원 소개", "단원 모집"],
+    ["극단 소개", "단원 소개", "단원 모집", "단원 상세(Test)"],
     ["공지사항", "연습일지"],
     ["공연 사진", "연습 사진"],
   ],
@@ -24,6 +24,7 @@ const menuInfos: MenuInfos = {
       "/about#about-intro",
       "/about#actors-intro",
       "/about#recruit-actor",
+      "/about/detail"
     ],
     ["#", "#"],
     ["#", "#"],
@@ -147,7 +148,7 @@ const Navbar = () => {
                     {menuInfos.mainMenuNames.map((value, idx)=>{
                       return (
                         <li className="h-[72px] flex justify-center cursor-pointer" onClick={() => mobileMovePage(menuInfos.mainMenuLinks[idx])} key={idx}>
-                          <div className="w-[360px] relative flex flex-row align-middle my-auto pl-6">
+                          <div className="w-[360px] relative flex flex-row my-auto pl-6">
                             <PiPlusThin className="inline-block text-[24px] mr-4 my-auto" />
                             <Text className="text-h5 inline-block">{value}</Text>
                           </div>
