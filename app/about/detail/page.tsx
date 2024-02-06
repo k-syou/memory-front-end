@@ -8,12 +8,13 @@ import { actorInfo } from "@/constants";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { PiArrowLeftThin } from "react-icons/pi";
-type Props = {
-  actorInfo?: actorInfo;
-};
-const ActorDetailPage = ({ actorInfo }: Props) => {
+// type Props = {
+//   actorInfo?: actorInfo;
+// };
+// const ActorDetailPage = ({ actorInfo }: Props) => {
+const ActorDetailPage = () => {
   const route = useRouter()
-  actorInfo = {
+  const actorInfo:actorInfo = {
     activities: [
       {
         startPeriod: "2023.04",
