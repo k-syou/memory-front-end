@@ -36,7 +36,7 @@ export interface ButtonProps
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, children, transition, ...props }, ref) => {
     return (
-      <button id={props.id} className={cn(ButtonVariants({ variant, className, transition }))}>{children}</button>
+      <button id={props.id} onClick={props.onClick} className={cn(ButtonVariants({ variant, className, transition }))}>{children}</button>
     )
   }
 );

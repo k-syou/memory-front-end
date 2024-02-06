@@ -1,5 +1,7 @@
 import Container from "@/components/atoms/Container";
+import Section from "@/components/atoms/Section";
 import Title from "@/components/atoms/Title";
+import Text from "@/components/atoms/disable/Text";
 import Image from "next/image";
 import React from "react";
 const photoData = [
@@ -15,35 +17,57 @@ const photoData = [
   "/images/actors/프사_지은.png",
   "/images/actors/프사_혁진.png",
   "/images/actors/프사_영민.png",
-  "/images/actors/프사_지은.png",
-  "/images/actors/프사_혁진.png",
-  "/images/actors/프사_영민.png",
-]
+];
+const nameData = [
+  "김지은",
+  "권혁진",
+  "고영민",
+  "김지은",
+  "권혁진",
+  "고영민",
+  "김지은",
+  "권혁진",
+  "고영민",
+  "김지은",
+  "권혁진",
+  "고영민",
+];
 const ActorsIntro = () => {
   return (
-    <section id="actors-intro">
+    <>
       <Title
-        textClassName=""
-        isUnderLine={true}
-        className="pb-[40px] pt-[180px]"
-        text="우리를 소개할게요"
+        id="actors-intro"
+        className="pt-40 pb-10"
+        text={"우리를 소개할게요"}
+        textClassName="text-h3"
       />
-      <div className="border-b border-solid border-black w-full box-border mx-auto">
-        <Container className="w-full grid grid-cols-6 place-items-center gap-y-[72px]">
-          {photoData.map((value, idx) => {
-            let is_border_t = idx > 5;
-            return (
-              <div className={`flex w-[252px] h-[417px] flex-col border-x-black border-box ${is_border_t ? 'border-t' : ''}`} key={idx}>
-                <div className="w-full h-[345px]">
-                  <Image src={value} width={1920} height={1920} alt=""></Image>
+      <Section>
+        <Container className="px-[106px]">
+          <div className="w-full grid grid-cols-5 place-items-center gap-y-9">
+            {photoData.map((value, idx) => {
+              return (
+                <div
+                  key={idx}
+                  className="flex flex-col w-[220px] border box-border"
+                >
+                  <div className="w-full h-[300px]">
+                    <Image
+                      src={value}
+                      width={1920}
+                      height={1920}
+                      alt=""
+                    ></Image>
+                  </div>
+                  <div className="w-full h-[54px] border-t box-border bg-gray100 flex justify-center items-center">
+                    <Text className="text-h6">{nameData[idx]}</Text>
+                  </div>
                 </div>
-                <div className="w-full h-[72px] bg-dark-gray border-y-black"></div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </Container>
-      </div>
-    </section>
+      </Section>
+    </>
   );
 };
 

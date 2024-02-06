@@ -1,5 +1,4 @@
 import Text from '@/components/atoms/disable/Text'
-import React from 'react'
 
 const notFound = () => {
   return (
