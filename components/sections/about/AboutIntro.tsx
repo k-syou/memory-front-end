@@ -12,6 +12,7 @@ const AboutIntro = () => {
   return (
     <>
       <Title
+        id="about-intro"
         className="pt-20 pb-10 box-border"
         text={"안녕하세요, 극단 기억입니다."}
         textClassName="text-h3"
