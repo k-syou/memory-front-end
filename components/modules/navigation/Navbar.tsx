@@ -9,10 +9,11 @@ import { IoMenuOutline } from "react-icons/io5";
 import Section from "@/components/atoms/Section";
 import Container from "@/components/atoms/Container";
 import { AnimatePresence, motion as m } from "framer-motion";
+import { PiPlusThin } from "react-icons/pi";
 
 const menuInfos: MenuInfos = {
   mainMenuNames: ["극단 기억", "극단 소식", "극단 앨범"],
-  mainMenuLinks: ["/pages/about", "#", "#"],
+  mainMenuLinks: ["/about", "#", "#"],
   subMenuInfo: [
     ["극단 소개", "단원 소개", "단원 모집"],
     ["공지사항", "연습일지"],
@@ -20,9 +21,9 @@ const menuInfos: MenuInfos = {
   ],
   subMenuLinks: [
     [
-      "/pages/about#about-intro",
-      "/pages/about#actors-intro",
-      "/pages/about#recruit-actor",
+      "/about#about-intro",
+      "/about#actors-intro",
+      "/about#recruit-actor",
     ],
     ["#", "#"],
     ["#", "#"],
@@ -33,6 +34,11 @@ const Navbar = () => {
   const [viewMenuBox, setViewMenuBox] = useState(false);
   const [viewMobileMenuWindow, setViewMobileMenuWindow] = useState(false);
   const route = useRouter();
+
+  const mobileMovePage = (url:string) => {
+    setViewMobileMenuWindow(false);
+    route.push(url);
+  }
 
   useEffect(() => {
     // navbar hover effect
@@ -94,12 +100,12 @@ const Navbar = () => {
       >
         <Container className="relative">
           {/* Logo */}
-          <div
-            className="absolute h-full sm:w-[93px] md:w-[93px] w-[124px] align-middle text-center sm:leading-[56px] md:leading-[56px] leading-[80px] cursor-pointer"
+          <button
+            className="absolute h-20 md:h-14 sm:h-14 sm:w-[93px] md:w-[93px] w-[124px] align-middle text-center cursor-pointer"
             onClick={() => route.push("/")}
           >
-            LOGO
-          </div>
+            <div className="my-auto inline-block">LOGO</div>
+          </button>
 
           {/* 데스크탑, 테블릿 */}
           <div className="h-full flex justify-end sm:hidden">
@@ -107,7 +113,7 @@ const Navbar = () => {
           </div>
 
           {/* 스마트폰 */}
-          <div className="h-full hidden justify-end sm:flex relative">
+          <div className="h-full hidden right-0 top-0 sm:flex sm:absolute relative">
             <Button id="menu-btn" className="w-14 h-14">
               <IoMenuOutline className="text-lg mx-auto" />
             </Button>
@@ -130,7 +136,7 @@ const Navbar = () => {
                       transition: {
                         duration: 0.3,
                       },
-                    },
+                    }, 
                   }}
                   initial="close"
                   animate="open"
@@ -140,7 +146,12 @@ const Navbar = () => {
                   <ul className="w-full h-auto bg-gray100 flex flex-col">
                     {menuInfos.mainMenuNames.map((value, idx)=>{
                       return (
-                        <li className="h-[72px]" key={idx}>{value}</li>
+                        <li className="h-[72px] flex justify-center cursor-pointer" onClick={() => mobileMovePage(menuInfos.mainMenuLinks[idx])} key={idx}>
+                          <div className="w-[360px] relative flex flex-row align-middle my-auto pl-6">
+                            <PiPlusThin className="inline-block text-[24px] mr-4 my-auto" />
+                            <Text className="text-h5 inline-block">{value}</Text>
+                          </div>
+                        </li>
                       )
                     })}
                   </ul>

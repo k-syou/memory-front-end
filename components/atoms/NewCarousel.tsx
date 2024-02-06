@@ -16,7 +16,7 @@ interface NewCarouselProps {
   isAutoPlay?: boolean;
   pictureClassName: string;
   isPrevNextBtn?: boolean;
-  isNextShowComponets?: boolean;
+  isNextShowComponents?: boolean;
   isLoop?: boolean;
   className?: string;
 }
@@ -25,7 +25,7 @@ const NewCarousel = ({
   isAutoPlay,
   pictureClassName,
   isPrevNextBtn,
-  isNextShowComponets,
+  isNextShowComponents,
   isLoop,
   className
 }: NewCarouselProps) => {
@@ -56,7 +56,7 @@ const NewCarousel = ({
             />
           </CarouselItem>
         ))}
-        {isNextShowComponets && (
+        {isNextShowComponents && (
           <CarouselItem
             className={cn(
               "flex justify-center text-center items-center basis-auto overflow-hidden"

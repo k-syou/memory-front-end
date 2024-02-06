@@ -26,14 +26,14 @@ const PlayPrev = () => {
         }
         align="text-left"
         containerClassName="sm:px-[24px]"
-        textClassName="text-h3 md:text-h4 sm:text-h4"
+        textClassName="text-h3 md:text-h4 sm:text-h4 sm:w-[150px]"
       />
       <Section border={"bottom"}>
         <Container>
           <NewCarousel
             images={["/images/posters/p1.jpg", "/images/posters/p2.png"]}
             pictureClassName="border-x box-border w-[316px] md:w-[235px] sm:w-[148px] h-[445px] md:h-[331px] sm:h-[213px]"
-            isNextShowComponets
+            isNextShowComponents
             isLoop
             isAutoPlay
           />
