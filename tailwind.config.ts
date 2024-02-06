@@ -133,7 +133,7 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        ko: "Montserrat, Pretendard, sans-serif",
+        ko: "Pretendard, sans-serif",
         en: "Montserrat, sans-serif",
       },
     },

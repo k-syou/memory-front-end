@@ -36,6 +36,7 @@ const ActorsIntro = () => {
   return (
     <>
       <Title
+        id="actors-intro"
         className="pt-40 pb-10"
         text={"우리를 소개할게요"}
         textClassName="text-h3"

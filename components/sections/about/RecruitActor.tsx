@@ -12,6 +12,7 @@ const RecruitActor = () => {
   return (
     <>
       <Title
+        id="recruit-actor"
         textClassName="text-h3"
         isUnderLine
         className="pb-11 pt-[160px]"
