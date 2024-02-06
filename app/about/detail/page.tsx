@@ -1,3 +1,4 @@
+"use client";
 import Button from "@/components/atoms/Button";
 import Container from "@/components/atoms/Container";
 import Section from "@/components/atoms/Section";
@@ -5,12 +6,13 @@ import Text from "@/components/atoms/Text";
 import Title from "@/components/atoms/Title";
 import { actorInfo } from "@/constants";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { PiArrowLeftThin } from "react-icons/pi";
 type Props = {
   actorInfo?: actorInfo;
 };
-
-const actorDetailPage = ({ actorInfo }: Props) => {
+const ActorDetailPage = ({ actorInfo }: Props) => {
+  const route = useRouter()
   actorInfo = {
     activities: [
       {
@@ -50,6 +52,7 @@ const actorDetailPage = ({ actorInfo }: Props) => {
           <>
             {actorInfo.name}
             <Button
+              onClick={() => route.push("/about")}
               variant={"navbarBtn"}
               className="absolute right-0 top-[50%] translate-y-[-50%] w-[118px] flex flex-row my-auto"
             >
@@ -79,7 +82,9 @@ const actorDetailPage = ({ actorInfo }: Props) => {
               />
             </div>
 
-            {actorInfo.activities.length > 1 && <div className="border-l h-full border-t"></div>}
+            {actorInfo.activities.length > 1 && (
+              <div className="border-l h-full border-t"></div>
+            )}
           </div>
 
           <div className="border-l pl-20 pt-12">
@@ -139,4 +144,4 @@ const actorDetailPage = ({ actorInfo }: Props) => {
   );
 };
 
-export default actorDetailPage;
+export default ActorDetailPage;
