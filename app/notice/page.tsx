@@ -1,7 +1,6 @@
 import { noticeData } from "@/components/sections/notice/Notice";
 import NoticeTable from "@/components/sections/notice/NoticeTable";
 import NoticeTitle from "@/components/sections/notice/NoticeTitle";
-import { random } from "cypress/types/lodash";
 
 const tableData: Array<noticeData> = [
   {

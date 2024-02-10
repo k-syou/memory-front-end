@@ -1,3 +1,4 @@
+"use client"
 import Section from "@/components/atoms/Section";
 import { noticeData } from "./Notice";
 import Container from "@/components/atoms/Container";
@@ -8,12 +9,14 @@ import {
   PiCaretCircleLeftLight as LeftCircle, 
   PiCaretCircleRightLight as RightCircle} 
   from "react-icons/pi";
+import { useRouter } from "next/navigation";
 
 type Props = {
   tableData: Array<noticeData>;
 };
 
 const NoticeTable = ({ tableData }: Props) => {
+  const route = useRouter()
   return (
     <Section border={"bottom"}>
       <Container>
@@ -41,7 +44,7 @@ const NoticeTable = ({ tableData }: Props) => {
                 <div className="table-cell pl-5 py-4">
                   <Text className="text-b1">{data.no}</Text>
                 </div>
-                <div className="table-cell pl-5">
+                <div className="table-cell pl-5 cursor-pointer" onClick={() => route.push('/notice/detail')}>
                   <Text className="text-b1">{data.title}</Text>
                 </div>
                 <div className="table-cell text-center">
