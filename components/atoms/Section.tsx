@@ -4,8 +4,12 @@ import { forwardRef } from "react";
 
 // text variants
 // class name values from figma
-const SectionVariants = cva("box-border border-solid min-w-[360px] overflow-hidden", {
+const SectionVariants = cva("box-border border-solid min-w-[360px]", {
   variants: {
+    overflow: {
+      default: "overflow-hidden",
+      visible: "overflow-visible"
+    },
     border: {
       default: "",
       bottom: "border-b",
@@ -23,6 +27,7 @@ const SectionVariants = cva("box-border border-solid min-w-[360px] overflow-hidd
   defaultVariants: {
     border: "default",
     borderColor: "black",
+    overflow: "default"
   },
 });
 
@@ -34,8 +39,8 @@ export interface SectionProps
 const Section = forwardRef<
   HTMLParagraphElement | HTMLHeadingElement,
   SectionProps
->(({ className, border, borderColor, children, ...props }, ref) => {
-  return <section id={props.id} className={cn(SectionVariants({className, border, borderColor}))}>{children}</section>;
+>(({ className, border, borderColor, children, overflow, ...props }, ref) => {
+  return <section id={props.id} className={cn(SectionVariants({className, border, borderColor, overflow}))}>{children}</section>;
 });
 Section.displayName = "Section";
 

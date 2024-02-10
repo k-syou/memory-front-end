@@ -13,7 +13,7 @@ import { PiPlusThin } from "react-icons/pi";
 
 const menuInfos: MenuInfos = {
   mainMenuNames: ["극단 기억", "극단 소식", "극단 앨범"],
-  mainMenuLinks: ["/about", "#", "#"],
+  mainMenuLinks: ["/about", "/notice", "#"],
   subMenuInfo: [
     ["극단 소개", "단원 소개", "단원 모집", "단원 상세(Test)"],
     ["공지사항", "연습일지"],
@@ -26,7 +26,7 @@ const menuInfos: MenuInfos = {
       "/about#recruit-actor",
       "/about/detail"
     ],
-    ["#", "#"],
+    ["/notice", "/notice"],
     ["#", "#"],
   ],
 };
