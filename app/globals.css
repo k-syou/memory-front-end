@@ -7,7 +7,9 @@
   @apply text-[50px]
 }
 
-
+input:focus {
+  outline: none;
+}
 /* Menu Button */
 .menu-btn {
   @apply text-black hover:text-white hover:border-black 
