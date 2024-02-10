@@ -52,19 +52,28 @@ const ActorDetailPage = () => {
         text={
           <>
             {actorInfo.name}
-            <Button
+            <Button variant={"backToListBtn"} className="absolute right-0 h-10" onClick={() => route.push("/about")}>
+              <PiArrowLeftThin className="absolute w-[24px] h-[24px] my-auto top-[50%] translate-y-[-50%] flex items-center" />
+              <Text
+                type="paragraph"
+                className="text-b1 sm:text-caption ml-8"
+              >
+                목록보기
+              </Text>
+            </Button>
+            {/* <Button
               onClick={() => route.push("/about")}
               variant={"navbarBtn"}
               className="absolute right-0 top-[50%] translate-y-[-50%] w-[118px] flex flex-row my-auto"
             >
-              <PiArrowLeftThin className="inline-block w-[17px] h-[14px] mr-1 my-auto" />
+              <PiArrowLeftThin className="inline-block text-[24px] w-[24px] h-[24px] mr-1 my-auto" />
               <Text
                 type="paragraph"
                 className="text-b1 sm:text-caption inline-block"
               >
                 목록보기
               </Text>
-            </Button>
+            </Button> */}
           </>
         }
         className="pt-20 pb-6"
