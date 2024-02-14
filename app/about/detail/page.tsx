@@ -98,7 +98,7 @@ const ActorDetailPage = () => {
           </div>
 
           <div className="border-l pl-20 pt-12">
-            <div className="flex flex-col border-b-2 box-border">
+            <div className="flex flex-col border-b box-border">
               <div>
                 <Text className="text-h5 mb-5">소개</Text>
               </div>
