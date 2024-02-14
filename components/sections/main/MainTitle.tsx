@@ -4,6 +4,7 @@ import MenuImage from "@/public/images/mainImage01.jpg";
 import Container from "@/components/atoms/Container";
 import Title from "@/components/atoms/Title";
 import Section from "@/components/atoms/Section";
+import { ma_txt_01_01 } from "./constants";
 
 const MainTitle = () => {
   return (
@@ -11,7 +12,7 @@ const MainTitle = () => {
       <Title
         isUnderLine={false}
         className="pt-[80px] pb-[40px]"
-        text="극단 기억에 오신 것을 환영합니다."
+        text={ma_txt_01_01}
         containerClassName="sm:px-[24px]"
         textClassName="md:text-h4 text-h3 sm:w-[200px] w-full"
       />

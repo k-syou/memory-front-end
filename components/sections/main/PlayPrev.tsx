@@ -4,6 +4,7 @@ import NewCarousel from "@/components/atoms/NewCarousel";
 import Section from "@/components/atoms/Section";
 import Text from "@/components/atoms/Text";
 import Title from "@/components/atoms/Title";
+import { ma_txt_04_01, ma_txt_04_02 } from "./constants";
 
 const PlayPrev = () => {
   return (
@@ -13,13 +14,13 @@ const PlayPrev = () => {
         className="pb-10 md:pb-8 sm:pb-6 pt-40 md:pt-[120px] sm:pt-12"
         text={
           <>
-            우리가 만든 기억이에요
+            {ma_txt_04_01}
             <Button
               variant={"navbarBtn"}
               className="absolute right-0 top-[50%] translate-y-[-50%]"
             >
               <Text type="paragraph" className="text-b1 sm:text-caption">
-                전체보기
+              {ma_txt_04_02}
               </Text>
             </Button>
           </>
@@ -39,22 +40,6 @@ const PlayPrev = () => {
           />
         </Container>
       </Section>
-      {/* <Title
-        isUnderLine
-        className="pb-[52px] pt-[198px]"
-        text="우리가 만든 기억이에요"
-        align="text-left"
-        textClassName=""
-      />
-      <div className="h-auto border-b border-solid border-black w-full box-border">
-        <Container className="sm:h-[752px] h-[213px]">
-          <NewCarousel
-            images={["/images/posters/p1.jpg", "/images/posters/p2.png"]}
-            pictureClassName="sm:w-[536px] w-[148px] sm:h-[752px] h-[213px] border-x border-solid border-black"
-            isNextShowComponets
-          />
-        </Container>
-      </div> */}
     </>
   );
 };

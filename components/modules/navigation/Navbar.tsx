@@ -58,12 +58,6 @@ const Navbar = () => {
     document.getElementById("menu-btn")?.addEventListener("click", () => {
       setViewMobileMenuWindow(!viewMobileMenuWindow);
     });
-    // document.getElementById("m-menu-box")?.addEventListener("mouseover", () => {
-    //   setViewMobileMenuWindow(true);
-    // });
-    // document.getElementById("m-menu-box")?.addEventListener("mouseleave", () => {
-    //   setViewMobileMenuWindow(false);
-    // });
   });
 
   const renderMainMenuItems = () => {

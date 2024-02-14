@@ -1,7 +1,7 @@
-import Container from "@/components/atoms/Container"
-import PosterBox from "@/components/atoms/PosterBox"
-import Section from "@/components/atoms/Section"
-import Title from "@/components/atoms/Title"
+import Container from "@/components/atoms/Container";
+import PosterBox from "@/components/atoms/PosterBox";
+import Section from "@/components/atoms/Section";
+import Title from "@/components/atoms/Title";
 
 const PhotoMainPage = () => {
   return (
@@ -51,7 +51,7 @@ const PhotoMainPage = () => {
         </Container>
       </Section>
     </>
-  )
-}
+  );
+};
 
-export default PhotoMainPage
+export default PhotoMainPage;

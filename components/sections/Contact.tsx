@@ -5,6 +5,7 @@ import { CiInstagram } from "react-icons/ci";
 import Button from "../atoms/Button";
 import Section from "../atoms/Section";
 import Title from "../atoms/Title";
+import { ma_txt_05_01 } from "./main/constants";
 
 // Mail, Insta 버튼 ClassName
 const btnClassName = "w-[140px] h-[140px] sm:w-[77px] sm:h-[77px] justify-center flex";
@@ -14,7 +15,7 @@ const Contact = () => {
   return (
     <>
       <Title
-        text={"기억이 궁금하시다면,"}
+        text={ma_txt_05_01}
         className="mt-[160px] md:mt-[120px] sm:mt-12 mb-10 md:mb-8 sm:mb-6"
         textClassName="text-h3 sm:text-h4 sm:max-w-[175px] sm:mx-auto"
         align="text-center"

@@ -14,7 +14,7 @@ import { PiArrowLeftThin } from "react-icons/pi";
 // const ActorDetailPage = ({ actorInfo }: Props) => {
 const ActorDetailPage = () => {
   const route = useRouter()
-  const actorInfo:actorInfo = {
+  const actorInfo: actorInfo = {
     activities: [
       {
         startPeriod: "2023.04",
@@ -61,19 +61,6 @@ const ActorDetailPage = () => {
                 목록보기
               </Text>
             </Button>
-            {/* <Button
-              onClick={() => route.push("/about")}
-              variant={"navbarBtn"}
-              className="absolute right-0 top-[50%] translate-y-[-50%] w-[118px] flex flex-row my-auto"
-            >
-              <PiArrowLeftThin className="inline-block text-[24px] w-[24px] h-[24px] mr-1 my-auto" />
-              <Text
-                type="paragraph"
-                className="text-b1 sm:text-caption inline-block"
-              >
-                목록보기
-              </Text>
-            </Button> */}
           </>
         }
         className="pt-20 pb-6"
@@ -115,9 +102,8 @@ const ActorDetailPage = () => {
                 return (
                   <div
                     key={idx}
-                    className={`flex flex-col pt-5 pb-5 gap-[10px] ${
-                      idx === 0 ? "" : "border-t"
-                    }`}
+                    className={`flex flex-col pt-5 pb-5 gap-[10px] ${idx === 0 ? "" : "border-t"
+                      }`}
                   >
                     <div className="flex gap-6">
                       <div>

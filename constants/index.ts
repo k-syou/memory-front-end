@@ -1,5 +1,8 @@
 // 상수값
 export const MAX_INT = 21;
+
+
+
 export interface activityDetail {
   startPeriod: string;
   endPeriod?: string;
