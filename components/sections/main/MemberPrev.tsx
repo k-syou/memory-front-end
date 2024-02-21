@@ -5,6 +5,7 @@ import NewCarousel from "@/components/atoms/NewCarousel";
 import Button from "@/components/atoms/Button";
 import Title from "@/components/atoms/Title";
 import Section from "@/components/atoms/Section";
+import { ma_txt_03_01, ma_txt_03_02 } from "./constants";
 
 const photoData = [
   "/images/actors/프사_지은.png",
@@ -27,13 +28,13 @@ const MemberPrev = () => {
         containerClassName="sm:px-[24px]"
         text={
           <>
-            우리를 소개할게요
+            {ma_txt_03_01}
             <Button
               variant={"navbarBtn"}
               className="absolute right-0 top-[50%] translate-y-[-50%]"
             >
               <Text type="paragraph" className="text-b1 sm:text-caption">
-                전체보기
+                {ma_txt_03_02}
               </Text>
             </Button>
           </>

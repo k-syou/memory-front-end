@@ -7,7 +7,7 @@ type Props = {
   menuInfos: MenuInfos;
 };
 
-const MenuBox = ({id, menuInfos}: Props) => {
+const MenuBox = ({ id, menuInfos }: Props) => {
   const renderSubMenus = () => {
     let menuInfo = menuInfos.subMenuInfo;
     let menuLinks = menuInfos.subMenuLinks;
@@ -17,7 +17,11 @@ const MenuBox = ({id, menuInfos}: Props) => {
           {info.map((text, idx2) => {
             return (
               <li key={`sub-item-${idx2}`} className="mb-[30px]">
-                <Text className="text-b1" type="link" url={menuLinks[idx][idx2]}>
+                <Text
+                  className="text-b1"
+                  type="link"
+                  url={menuLinks[idx][idx2]}
+                >
                   {text}
                 </Text>
               </li>
