@@ -37,20 +37,20 @@ const ActorsIntro = () => {
     <>
       <Title
         id="actors-intro"
-        className="pt-40 pb-10"
+        className="pt-40 pb-10 md:pt-12 md:pb-[30px]"
         text={"우리를 소개할게요"}
-        textClassName="text-h3"
+        textClassName="text-h3 md:text-h4"
       />
-      <Section>
-        <Container className="px-[106px]">
-          <div className="w-full grid place-items-center grid-cols-5 gap-y-9 lg:grid-cols-4">
+      <Section className="md:border-b md:pb-[78px]">
+        <Container className="px-[106px] lg:px-[34px] md:px-0">
+          <div className="w-full grid place-items-center grid-cols-5 gap-y-9 lg:grid-cols-4 md:grid-cols-4 md:gap-y-6">
             {photoData.map((value, idx) => {
               return (
                 <div
                   key={idx}
-                  className="flex flex-col w-[220px] border box-border"
+                  className="border box-border flex flex-col w-[220px] md:w-[174px]"
                 >
-                  <div className="w-full h-[300px]">
+                  <div className="w-full h-[300px] md:h-[237px]">
                     <Image
                       src={value}
                       width={1920}
@@ -58,8 +58,8 @@ const ActorsIntro = () => {
                       alt=""
                     ></Image>
                   </div>
-                  <div className="w-full h-[54px] border-t box-border bg-gray100 flex justify-center items-center">
-                    <Text className="text-h6">{nameData[idx]}</Text>
+                  <div className="border-t box-border bg-gray100 flex justify-center items-center w-full h-[54px]">
+                    <Text className="text-h6 ">{nameData[idx]}</Text>
                   </div>
                 </div>
               );
