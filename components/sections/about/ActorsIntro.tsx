@@ -37,13 +37,13 @@ const ActorsIntro = () => {
     <>
       <Title
         id="actors-intro"
-        className="pt-40 pb-10 md:pt-12 md:pb-[30px]"
+        className="pt-40 pb-10 md:pt-12 md:pb-[30px] sm:pt-8 sm:pb-6 sm:pl-6"
         text={"우리를 소개할게요"}
-        textClassName="text-h3 md:text-h4"
+        textClassName="text-h3 md:text-h4 sm:text-h4"
       />
-      <Section className="md:border-b md:pb-[78px]">
+      <Section className="md:border-b md:pb-[78px] sm:border-b sm:pb-[60px]">
         <Container className="px-[106px] lg:px-[34px] md:px-0">
-          <div className="w-full grid place-items-center grid-cols-5 gap-y-9 lg:grid-cols-4 md:grid-cols-4 md:gap-y-6">
+          <div className="w-full grid place-items-center grid-cols-5 gap-y-9 lg:grid-cols-4 md:grid-cols-4 md:gap-y-6 sm:hidden">
             {photoData.map((value, idx) => {
               return (
                 <div
@@ -65,6 +65,7 @@ const ActorsIntro = () => {
               );
             })}
           </div>
+          {/* 2줄 짜리 캐러셀 */}
         </Container>
       </Section>
     </>

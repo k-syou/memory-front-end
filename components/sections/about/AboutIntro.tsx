@@ -13,14 +13,14 @@ const AboutIntro = () => {
     <>
       <Title
         id="about-intro"
-        className="box-border pt-20 pb-10 md:pt-14"
-        text={<>안녕하세요, <br className="hidden md:inline" />극단 기억입니다.</>}
-        textClassName="text-h3 md:w-[263px]"
+        className="box-border pt-20 pb-10 md:pt-14 sm:pt-10 sm:px-6"
+        text={<>안녕하세요, <br className="hidden md:inline sm:inline" />극단 기억입니다.</>}
+        textClassName="text-h3"
         isUnderLine
       />
       <Section border={"bottom"}>
-        <Container className="flex md:flex-col-reverse">
-          <div className="overflow-hidden bg-black w-[582px] h-[415px] lg:w-[498px] lg:h-[356px] md:w-[504px] md:h-[360px] md:mx-auto md:mb-14">
+        <Container className="flex md:flex-col-reverse sm:flex-col-reverse sm:px-6">
+          <div className="overflow-hidden bg-black w-[582px] h-[415px] lg:w-[498px] lg:h-[356px] md:w-[504px] md:h-[360px] md:mx-auto md:mb-14 sm:w-full sm:h-[201px] sm:mb-14">
             <Image
               src={mainImage}
               alt="이미지"
@@ -28,9 +28,9 @@ const AboutIntro = () => {
               width={1920}
             ></Image>
           </div>
-          <div className="flex flex-col pt-12 pl-[72px] md:pl-0">
-            <Text className="text-h5 mb-4 md:text-h4">소중한 기억을 만들어갑니다.</Text>
-            <Text className="text-b1 w-[582px] lg:w-[479px] md:w-full md:pb-[30px]">
+          <div className="flex flex-col pt-12 pl-[72px] md:pl-0 sm:pt-8 sm:pl-0">
+            <Text className="text-h5 mb-4 md:text-h4 sm:text-h4">소중한 기억을 만들어갑니다.</Text>
+            <Text className="text-b1 w-[582px] lg:w-[479px] md:w-full md:pb-[30px] sm:w-full sm:pb-8">
               극단 기억은 무대 위에서 감동과 웃음을 나누는 뮤지컬/연극
               동호회입니다. <br />
               우리는 다양한 직업과 전공을 가진 직장인들, 대학생들이 모여
