@@ -10,16 +10,16 @@ const config: Config = {
     screens: {
       xl: { min: "1440px", max: "1920px" },
       lg: { min: "1020px", max: "1440px" },
-      md: { min: "728px", max: "1020px" },
-      sm: { max: "728px" },
+      md: { min: "768px", max: "1020px" },
+      sm: { max: "768px" },
     },
     container: {
       center: true,
       screens: {
         xl: { min: "1440px", max: "1920px" },
         lg: { min: "1020px", max: "1440px" },
-        md: { min: "728px", max: "1020px" },
-        sm: { min: "360px", max: "728px" },
+        md: { min: "768px", max: "1020px" },
+        sm: { min: "360px", max: "768px" },
       },
     },
     fontSize: {

@@ -9,7 +9,7 @@ import { IoMenuOutline } from "react-icons/io5";
 import Section from "@/components/atoms/Section";
 import Container from "@/components/atoms/Container";
 import { AnimatePresence, motion as m } from "framer-motion";
-import { PiPlusThin } from "react-icons/pi";
+import { PiPlusThin, PiXLight } from "react-icons/pi";
 
 const menuInfos: MenuInfos = {
   mainMenuNames: ["극단 기억", "극단 소식", "극단 앨범"],
@@ -24,7 +24,7 @@ const menuInfos: MenuInfos = {
       "/about#about-intro",
       "/about#actors-intro",
       "/about#recruit-actor",
-      "/about/detail"
+      "/about/detail",
     ],
     ["/notice", "/notice"],
     ["/photo", "/photo"],
@@ -39,7 +39,7 @@ const Navbar = () => {
   const mobileMovePage = (url: string) => {
     setViewMobileMenuWindow(false);
     route.push(url);
-  }
+  };
 
   useEffect(() => {
     // navbar hover effect
@@ -102,17 +102,45 @@ const Navbar = () => {
               <div className="my-auto inline-block">LOGO</div>
             </button>
 
-            {/* 데스크탑, 테블릿 */}
-            <div className="h-full flex justify-end sm:hidden">
+            {/* 데스크탑 */}
+            <div className="h-full flex justify-end md:hidden sm:hidden">
               {renderMainMenuItems()}
             </div>
 
-            {/* 스마트폰 */}
-            <div className="h-full hidden right-0 top-0 sm:flex sm:absolute relative">
+            {/* 테블릿, 스마트폰 */}
+            <div className="h-full hidden right-0 top-0 md:flex md:absolute sm:flex sm:absolute z-50">
               <Button id="menu-btn" className="w-14 h-14">
-                <IoMenuOutline className="text-lg mx-auto" />
+                {!viewMobileMenuWindow ? (
+                  <IoMenuOutline className="w-5 h-5 mx-auto" />
+                ) : (
+                  <PiXLight className="w-5 h-5 mx-auto" />
+                )}
               </Button>
-              <AnimatePresence>
+              <div
+                className={`fixed top-14 h-[1000px] bg-black bg-opacity-70 z-50 w-full right-0 ${
+                  viewMobileMenuWindow ? "block" : "hidden"
+                }`}
+              >
+                <ul className="absolute top-0 right-0 w-full h-auto bg-gray100 flex flex-col z-50">
+                  {menuInfos.mainMenuNames.map((value, idx) => {
+                    return (
+                      <li
+                        className="h-[72px] flex justify-center cursor-pointer"
+                        onClick={() =>
+                          mobileMovePage(menuInfos.mainMenuLinks[idx])
+                        }
+                        key={idx}
+                      >
+                        <div className="md:w-[768px] sm:w-[360px] relative flex flex-row my-auto pl-6">
+                          <PiPlusThin className="inline-block text-[24px] mr-4 my-auto" />
+                          <Text className="text-h5 inline-block">{value}</Text>
+                        </div>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+              {/* <AnimatePresence>
                 {viewMobileMenuWindow && (
                   <m.div
                     id="m-menu-box"
@@ -137,8 +165,7 @@ const Navbar = () => {
                     animate="open"
                     exit="close"
                   >
-                    {/*  */}
-                    <ul className="w-full h-auto bg-gray100 flex flex-col">
+                    <ul className="w-full h-auto bg-gray100 flex flex-col z-50">
                       {menuInfos.mainMenuNames.map((value, idx) => {
                         return (
                           <li className="h-[72px] flex justify-center cursor-pointer" onClick={() => mobileMovePage(menuInfos.mainMenuLinks[idx])} key={idx}>
@@ -153,7 +180,7 @@ const Navbar = () => {
                     <div className="w-full h-full bg-black opacity-70"></div>
                   </m.div>
                 )}
-              </AnimatePresence>
+              </AnimatePresence> */}
             </div>
           </Container>
         </Section>
