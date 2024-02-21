@@ -16,7 +16,7 @@ type Props = {
 };
 
 const NoticeTable = ({ tableData }: Props) => {
-  const route = useRouter();
+  // const route = useRouter();
   return (
     <Section border={"bottom"}>
       <Container>
@@ -49,7 +49,8 @@ const NoticeTable = ({ tableData }: Props) => {
                 <div className="table-cell pl-5 cursor-pointer">
                   <Text
                     className="text-b1"
-                    onClick={() => route.push("/notice/detail")}
+                    type="link"
+                    url={`/notice/detail`}
                   >
                     {data.title}
                   </Text>

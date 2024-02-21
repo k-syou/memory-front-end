@@ -27,10 +27,12 @@ const NoticeDetailPage = () => {
               <Text>2024.01.21</Text>
             </div>
           </div>
+
           {/* 내용 */}
           <div className="pt-8 pb-20 border-b font-ko">
             <div>내용입니다~</div>
           </div>
+          
           {/* prev, next */}
           <div className="table border-collapse mb-7">
             <div className="table-row w-full border-b">

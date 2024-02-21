@@ -24,7 +24,7 @@ const RecruitActor = () => {
             <div className="mb-4">
               <Text className="text-h5">소중한 기억, 함께 만들어요</Text>
             </div>
-            <div className="w-[600px] mb-9">
+            <div className="w-[600px] mb-9 lg:w-[452px]">
               <Text className="text-b1">
                 극단 기억에서,
                 <br />
@@ -40,7 +40,7 @@ const RecruitActor = () => {
             </div>
             <Button variant={"backToListBtn"} className="w-[185px]">지원서 다운로드</Button>
           </div>
-          <div className="w-[582px] h-[415px] bg-black">
+          <div className="bg-black w-[582px] h-[415px] lg:w-[506px] lg:h-[360px]">
             <Image
               src={mainImage}
               alt="이미지"

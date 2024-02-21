@@ -20,7 +20,7 @@ const AboutIntro = () => {
       />
       <Section border={"bottom"}>
         <Container className="flex">
-          <div className="w-[582px] h-[415px] bg-black overflow-hidden">
+          <div className="overflow-hidden bg-black w-[582px] h-[415px] lg:w-[498px] lg:h-[356px]">
             <Image
               src={mainImage}
               alt="이미지"
@@ -30,7 +30,7 @@ const AboutIntro = () => {
           </div>
           <div className="flex flex-col pt-12 pl-[72px]">
             <Text className="text-h5 mb-4">소중한 기억을 만들어갑니다.</Text>
-            <Text className="text-b1 w-[582px]">
+            <Text className="text-b1 w-[582px] lg:w-[479px]">
               극단 기억은 무대 위에서 감동과 웃음을 나누는 뮤지컬/연극
               동호회입니다. <br />
               우리는 다양한 직업과 전공을 가진 직장인들, 대학생들이 모여

@@ -43,7 +43,7 @@ const ActorsIntro = () => {
       />
       <Section>
         <Container className="px-[106px]">
-          <div className="w-full grid grid-cols-5 place-items-center gap-y-9">
+          <div className="w-full grid place-items-center grid-cols-5 gap-y-9 lg:grid-cols-4">
             {photoData.map((value, idx) => {
               return (
                 <div
