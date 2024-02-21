@@ -3,9 +3,12 @@ import Container from "@/components/atoms/Container";
 import Section from "@/components/atoms/Section";
 import Text from "@/components/atoms/Text";
 import Title from "@/components/atoms/Title";
+import { cn } from "@/lib/utils";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 import React from "react";
+
+const imgSize = "w-[582px] h-[415px] lg:w-[498px] lg:h-[356px] md:w-[504px] md:h-[360px] sm:w-full sm:h-[201px]"
 
 const AboutIntro = () => {
   const mainImage: StaticImport = require("@/public/images/mainImage01.jpg");
@@ -13,14 +16,14 @@ const AboutIntro = () => {
     <>
       <Title
         id="about-intro"
-        className="box-border pt-20 pb-10 md:pt-14 sm:pt-10 sm:px-6"
+        className="box-border pt-20 pb-10 md:pt-14 sm:pt-10"
         text={<>안녕하세요, <br className="hidden md:inline sm:inline" />극단 기억입니다.</>}
         textClassName="text-h3"
         isUnderLine
       />
       <Section border={"bottom"}>
         <Container className="flex md:flex-col-reverse sm:flex-col-reverse sm:px-6">
-          <div className="overflow-hidden bg-black w-[582px] h-[415px] lg:w-[498px] lg:h-[356px] md:w-[504px] md:h-[360px] md:mx-auto md:mb-14 sm:w-full sm:h-[201px] sm:mb-14">
+          <div className={cn("overflow-hidden bg-black md:mx-auto md:mb-14 sm:mb-14", imgSize)}>
             <Image
               src={mainImage}
               alt="이미지"

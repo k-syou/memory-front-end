@@ -5,11 +5,10 @@ import Text from "@/components/atoms/disable/Text";
 import Section from "@/components/atoms/Section";
 
 const SubContents = () => {
-  // 태블릿 개발 필요함
   return (
     <>
       <Section border={"bottom"}>
-        <Container className="h-[348px] lg:h-[292px] flex md:flex-col-reverse sm:flex-col-reverse sm:px-6 md:gap-[30px] sm:gap-8 md:h-[645px] sm:h-[614px]">
+        <Container className="h-[348px] lg:h-[292px] flex md:flex-col-reverse sm:flex-col-reverse sm:px-6 md:gap-[30px] sm:gap-8 md:h-[645px] sm:h-full">
           <div className="w-[488px] min-w-[488px] lg:w-[410px] lg:min-w-[410px] md:w-[504px] md:min-w-[504px] md:h-[360px] md:mx-auto md:mb-14 sm:mb-14 sm:w-[312px] sm:min-w-[312px] sm:h-[230px] bg-black overflow-hidden">
             <Image
               src={image}
@@ -31,7 +30,7 @@ const SubContents = () => {
         </Container>
       </Section>
       <Section border={"bottom"}>
-        <Container className="h-[365px] lg:h-[306px] flex md:flex-col sm:flex-col sm:px-6 md:gap-[30px] sm:gap-8 md:h-[645px] sm:h-[614px]">
+        <Container className="h-[365px] lg:h-[306px] flex md:flex-col sm:flex-col sm:px-6 md:gap-[30px] sm:gap-8 md:h-[645px] sm:h-full">
           <div className="h-full w-[220px] lg:w-[30px] border-r md:hidden sm:hidden"></div>
           <div className="w-full flex flex-col pl-[72px] lg:pl-10 md:pl-0 sm:pl-0 pt-12 lg:pt-8">
             <Text className="text-h4 mb-6 md:mb-4 sm:mb-4">기억은요,</Text>

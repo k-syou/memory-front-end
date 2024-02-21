@@ -13,7 +13,7 @@ const RecruitActor = () => {
     <>
       <Title
         id="recruit-actor"
-        textClassName="text-h3 md:text-h4 sm:text-h4 sm:pl-6"
+        textClassName="text-h3 md:text-h4 sm:text-h4"
         isUnderLine
         className="pb-11 pt-[160px] md:pt-12 md:pb-4 md:border-b-0 sm:pt-8 sm:pb-4 sm:border-b-0"
         text={<>우리, <br className="hidden sm:inline"/>함께 할래요?</>}

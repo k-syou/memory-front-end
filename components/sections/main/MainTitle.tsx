@@ -11,9 +11,8 @@ const MainTitle = () => {
     <>
       <Title
         isUnderLine={false}
-        className="pt-[80px] pb-[40px]"
+        className="pt-[80px] pb-[40px] sm:pt-10 sm:pb-[30px]"
         text={ma_txt_01_01}
-        containerClassName="sm:px-[24px]"
         textClassName="md:text-h4 text-h3 sm:w-[200px] w-full"
       />
       <Section border={"bottom"}>

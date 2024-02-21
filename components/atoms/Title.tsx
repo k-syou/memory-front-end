@@ -31,7 +31,7 @@ const Title = ({
       border={isUnderLine ? "bottom" : "default"}
       className={className}
     >
-      <Container className={cn(containerClassName, "relative")}>
+      <Container className={cn(containerClassName, "relative sm:px-6")}>
         <Text type="paragraph" className={cn(align, "block", textClassName)}>
           {text}
         </Text>

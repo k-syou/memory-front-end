@@ -17,7 +17,7 @@ const Contact = () => {
       <Title
         text={ma_txt_05_01}
         className="mt-[160px] md:mt-[120px] sm:mt-12 mb-10 md:mb-8 sm:mb-6"
-        textClassName="text-h3 sm:text-h4 sm:max-w-[175px] sm:mx-auto"
+        textClassName="text-h3 sm:text-h4 sm:mx-auto"
         align="text-center"
       />
 
