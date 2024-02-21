@@ -108,7 +108,7 @@ const Navbar = () => {
             </div>
 
             {/* 스마트폰 */}
-            <div className="h-full hidden right-0 top-0 sm:flex sm:absolute relative">
+            <div className="h-full hidden right-0 top-0 sm:flex sm:absolute relative z-50">
               <Button id="menu-btn" className="w-14 h-14">
                 <IoMenuOutline className="text-lg mx-auto" />
               </Button>
