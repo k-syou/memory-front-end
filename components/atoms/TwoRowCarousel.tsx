@@ -6,7 +6,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Image from "next/image";
 import { cn } from "@/lib/utils";
 import Text from "./Text";
 import Autoplay from "embla-carousel-autoplay";
@@ -35,7 +34,7 @@ const TwoRowCarousel = ({
     imageCountList[index] = index * 2;
   }
   const nextShowComponent = (
-    <div className={cn("relative", pictureClassName)}>
+    <div className={cn("relative", pictureClassName)} >
       <Text
         type="paragraph"
         className={cn(
@@ -82,7 +81,7 @@ const TwoRowCarousel = ({
     return (
       <>
         <CarouselItem
-          key={idx}
+          key={`photo-${idx}`}
           className={cn(
             "flex flex-col items-center content-center basis-auto overflow-hidden gap-4"
           )}
