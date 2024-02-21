@@ -48,7 +48,7 @@ const DropdownMenu = forwardRef<HTMLButtonElement, ButtonProps>(
       setIsOpen(!isOpen);
     }
     return (
-      <div className={cn(`border-b relative overflow-visible h-full`, className)}>
+      <div className={cn(`border-b relative overflow-visible h-full bg-white`, className)}>
         <div
           className={cn(DropdownMenuVariants({ menuStyle }), "flex relative")}
           onClick={() => topMenuClick()}
@@ -61,7 +61,7 @@ const DropdownMenu = forwardRef<HTMLButtonElement, ButtonProps>(
           </div>
         </div>
 
-        <div className={`${isOpen ? "absolute" : "hidden"} flex-col border-b`}>
+        <div className={`${isOpen ? "absolute" : "hidden"} flex-col bg-white border-b`}>
           {menuList.map((menu, idx) => {
             if (selectIdx === idx) {
               return <></>;
@@ -69,7 +69,7 @@ const DropdownMenu = forwardRef<HTMLButtonElement, ButtonProps>(
               return (
                 <div
                   key={idx}
-                  className={cn(DropdownMenuVariants({ menuStyle }), "")}
+                  className={cn(DropdownMenuVariants({ menuStyle }), "border-t-0")}
                   onClick={() => dropdownMenuClick(idx)}
                 >
                   <Text id={`${valueId}-${idx}`} className="text-b1">
