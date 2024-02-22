@@ -38,7 +38,7 @@ const RecruitActor = () => {
                 순간을 기다리고 있습니다.
               </Text>
             </div>
-            <Button variant={"backToListBtn"} className="w-[185px] md:mx-auto sm:mx-auto">지원서 다운로드</Button>
+            <Button variant={"downloadBtn"} className="md:mx-auto sm:mx-auto">지원서 다운로드</Button>
           </div> 
           <div className="bg-black w-[582px] overflow-hidden h-[415px] lg:w-[506px] lg:h-[360px] md:mt-8 md:mx-auto md:w-[555px] md:h-[355px] sm:mt-8 sm:w-full sm:h-[200px]">
             <Image
