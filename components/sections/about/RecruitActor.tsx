@@ -1,6 +1,7 @@
 "use client";
 import Button from "@/components/atoms/Button";
 import Container from "@/components/atoms/Container";
+import Enter from "@/components/atoms/Enter";
 import Section from "@/components/atoms/Section";
 import Text from "@/components/atoms/Text";
 import Title from "@/components/atoms/Title";
@@ -16,8 +17,8 @@ const RecruitActor = () => {
         textClassName="text-h3 md:text-h4 sm:text-h4"
         isUnderLine
         className="pb-11 pt-[160px] md:pt-12 md:pb-4 md:border-b-0 sm:pt-8 sm:pb-4 sm:border-b-0"
-        text={<>우리, <br className="hidden sm:inline"/>함께 할래요?</>}
-      />
+        text={<>우리, <Enter sm/>함께 할래요?</>}
+      /> 
       <Section border={"bottom"} className="md:pb-14 sm:pb-14">
         <Container className="flex md:flex-col sm:px-6 sm:flex-col">
           <div className="flex flex-col w-[858px] pt-11 lg:w-[514px] md:w-full md:pt-0 sm:w-full sm:pt-0">
