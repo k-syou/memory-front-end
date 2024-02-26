@@ -116,7 +116,7 @@ const config: Config = {
       ],
     },
     colors: {
-      // Test
+      // basic colors
       black: "#000",
       gray900: "#3d3d3d",
       gray700: "#6f6f6f",
@@ -127,9 +127,23 @@ const config: Config = {
       gray200: "#f5f5f5",
       gray100: "#f9f9f9",
       white: "#fff",
+      // play colors
       lavender: "#584C82",
       "dark-turquoise": "#202e37",
       "wood-brown": "#72573d",
+      // actor colors
+      "min-purple": "#e4cbf7",
+      "jin-blue": "#bfd9fe",
+      "kwon-sky": "#c1ebf6",
+      "gyu-gray": "#d8d8d8",
+      "jing-yellow": "#fdebb3",
+      "jyeong-black": "#8b8b8b",
+      "hoon-brown": "#e4cdc0",
+      "som-white": "#fff",
+      "sha-pink": "#febedf",
+      "do-orange": "#fcceaf",
+      "noo-green": "#b9e9c9",
+      "ko-red": "#fda8a0",
     },
     extend: {
       fontFamily: {

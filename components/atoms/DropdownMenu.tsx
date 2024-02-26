@@ -14,10 +14,10 @@ const DropdownMenuVariants = cva("", {
     },
     menuStyle: {
       default:
-        "py-[10px] pl-[10px] w-[96px] border-x border-t border-collapse box-border cursor-pointer",
+        "py-[10px] sm:py-2 pl-[10px] w-[96px] border-x border-t border-collapse box-border cursor-pointer sm:w-[80px] h-[46px] sm:h-10",
     },
     dropdownMenuStyle: {
-      default: "top-[45px] left-0 z-30",
+      default: "top-[45px] sm:top-10 left-0 z-30",
     },
   },
   defaultVariants: {
@@ -48,7 +48,7 @@ const DropdownMenu = forwardRef<HTMLButtonElement, ButtonProps>(
       setIsOpen(!isOpen);
     }
     return (
-      <div className={cn(`border-b relative overflow-visible h-full bg-white`, className)}>
+      <div className={cn(`border-b relative overflow-visible bg-white h-[46px] sm:h-10`, className)}>
         <div
           className={cn(DropdownMenuVariants({ menuStyle }), "flex relative")}
           onClick={() => topMenuClick()}
@@ -56,7 +56,7 @@ const DropdownMenu = forwardRef<HTMLButtonElement, ButtonProps>(
           <Text id={valueId} className="text-b1">
             {menuList[selectIdx]}
           </Text>
-          <div className="my-auto absolute right-4 top-[50%] translate-y-[-50%]">
+          <div className="my-auto absolute right-4 sm:right-2 top-[50%] translate-y-[-50%]">
             {isOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
           </div>
         </div>
@@ -72,7 +72,7 @@ const DropdownMenu = forwardRef<HTMLButtonElement, ButtonProps>(
                   className={cn(DropdownMenuVariants({ menuStyle }), "border-t-0")}
                   onClick={() => dropdownMenuClick(idx)}
                 >
-                  <Text id={`${valueId}-${idx}`} className="text-b1">
+                  <Text id={`${valueId}-${idx}`} className="text-b1 sm:text-b2">
                     {menu}
                   </Text>
                 </div>
