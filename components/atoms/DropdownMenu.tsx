@@ -64,7 +64,7 @@ const DropdownMenu = forwardRef<HTMLButtonElement, ButtonProps>(
         <div className={`${isOpen ? "absolute" : "hidden"} flex-col bg-white border-b`}>
           {menuList.map((menu, idx) => {
             if (selectIdx === idx) {
-              return <></>;
+              return <div key={idx}></div>;
             } else {
               return (
                 <div
