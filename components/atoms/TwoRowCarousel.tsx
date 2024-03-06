@@ -79,9 +79,8 @@ const TwoRowCarousel = ({
       isAddNextShowComponent = !isAddNextShowComponent;
     }
     return (
-      <>
+      <div key={idx}>
         <CarouselItem
-          key={`photo-${idx}`}
           className={cn(
             "flex flex-col items-center content-center basis-auto overflow-hidden gap-4"
           )}
@@ -90,7 +89,6 @@ const TwoRowCarousel = ({
         </CarouselItem>
         {!isAddNextShowComponent && isNextShowComponents ? (
           <CarouselItem
-            key={idx}
             className={cn(
               "flex flex-col items-center content-center basis-auto overflow-hidden gap-4"
             )}
@@ -100,7 +98,7 @@ const TwoRowCarousel = ({
         ) : (
           <></>
         )}
-      </>
+      </div>
     );
   });
 

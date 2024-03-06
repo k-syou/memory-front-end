@@ -8,6 +8,21 @@ import { ma_txt_04_01, ma_txt_04_02 } from "./constants";
 import TwoRowCarousel from "@/components/atoms/TwoRowCarousel";
 import Image from "next/image";
 
+const playNames = ["넥투노", "로망스다방", "이눈그"];
+const posterPaths = playNames.map((name) => {
+  return `/images/posters/포스터_${name}.png`
+})
+const posterDatas = posterPaths.map((path, idx) => {
+  return (
+    <Image
+      src={path}
+      alt="demo_image"
+      width={1920}
+      height={1920}
+      key={idx}
+    />
+  );
+});
 const PlayPrev = () => {
   return (
     <>
@@ -34,7 +49,7 @@ const PlayPrev = () => {
       <Section border={"bottom"}>
         <Container className="sm:mb-14">
           <NewCarousel
-            images={["/images/posters/p1.jpg", "/images/posters/p2.png"]}
+            images={posterPaths}
             pictureClassName="border-x box-border w-[316px] md:w-[235px] sm:w-[148px] h-[445px] md:h-[331px] sm:h-[213px]"
             className="block sm:hidden"
             isNextShowComponents
@@ -42,22 +57,7 @@ const PlayPrev = () => {
             isAutoPlay
           />
           <TwoRowCarousel
-            images={[
-              <Image
-                src={"/images/posters/p1.jpg"}
-                alt="demo_image"
-                width={1920}
-                height={1920}
-                key={1}
-              />,
-              <Image
-                src={"/images/posters/p2.png"}
-                alt="demo_image"
-                width={1920}
-                height={1920}
-                key={2}
-              />,
-            ]}
+            images={posterDatas}
             pictureClassName="h-[200px] w-[150px] border border-solid border-black"
             className="sm:block hidden"
             isAutoPlay

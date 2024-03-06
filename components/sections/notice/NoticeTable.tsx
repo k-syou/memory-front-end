@@ -10,6 +10,7 @@ import {
   PiCaretCircleRightLight as RightCircle,
 } from "react-icons/pi";
 import { useRouter } from "next/navigation";
+import NoticePagenation from "./NoticePagenation";
 
 type Props = {
   tableData: Array<noticeData>;
@@ -70,7 +71,7 @@ const NoticeTable = ({ tableData }: Props) => {
                 </div>
 
                 {/* 모바일 */}
-                <div className="table-cell w-full py-[10px]">
+                <div className="w-full py-[10px] hidden sm:table-cell">
                   <Text
                     className="text-b2 cursor-pointer block w-full"
                     type="link"
@@ -87,9 +88,10 @@ const NoticeTable = ({ tableData }: Props) => {
             );
           })}
         </div>
-        <div className="flex justify-end text-[25px] items-center mb-[72px]">
-          <DblLeftCircle className="mr-2 cursor-pointer text-gray500" />
-          <LeftCircle className="mr-5 cursor-pointer text-gray500" />
+        <NoticePagenation />
+        {/* <div className="flex justify-end text-[25px] items-center mb-[72px]">
+          <DblLeftCircle className="mr-2 cursor-pointer text-gray500 w-[25px] h-[25px]" />
+          <LeftCircle className="mr-5 cursor-pointer text-gray500 w-[25px] h-[25px]" />
           <div className="flex gap-5 justify-center">
             <div className="w-[25px] h-[25px] rounded-full bg-black text-gray100 my-auto text-center">
               <Text className="text-h6 leading-[25px]">1</Text>
@@ -122,9 +124,9 @@ const NoticeTable = ({ tableData }: Props) => {
               <Text className="text-h6 text-gray500 sm:hidden">10</Text>
             </div>
           </div>
-          <DblRightCircle className="ml-5 cursor-pointer" />
-          <RightCircle className="ml-2 cursor-pointer" />
-        </div>
+          <DblRightCircle className="ml-5 cursor-pointer w-[25px] h-[25px]" />
+          <RightCircle className="ml-2 cursor-pointer w-[25px] h-[25px]" />
+        </div> */}
       </Container>
     </Section>
   );

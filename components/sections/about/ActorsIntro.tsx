@@ -2,37 +2,25 @@ import Container from "@/components/atoms/Container";
 import Section from "@/components/atoms/Section";
 import Title from "@/components/atoms/Title";
 import TwoRowCarousel from "@/components/atoms/TwoRowCarousel";
-import Text from "@/components/atoms/disable/Text";
+import Text from "@/components/atoms/Text";
 import Image from "next/image";
 import React from "react";
-const photoData = [
-  "/images/actors/프사_지은.png",
-  "/images/actors/프사_혁진.png",
-  "/images/actors/프사_영민.png",
-  "/images/actors/프사_지은.png",
-  "/images/actors/프사_혁진.png",
-  "/images/actors/프사_영민.png",
-  "/images/actors/프사_지은.png",
-  "/images/actors/프사_혁진.png",
-  "/images/actors/프사_영민.png",
-  "/images/actors/프사_지은.png",
-  "/images/actors/프사_혁진.png",
-  "/images/actors/프사_영민.png",
-];
-const nameData = [
-  "김지은",
+const actorNames = [
   "권혁진",
-  "고영민",
+  "김권수",
+  "김규나",
   "김지은",
-  "권혁진",
-  "고영민",
-  "김지은",
-  "권혁진",
-  "고영민",
-  "김지은",
-  "권혁진",
+  "온훈",
+  "이다솜",
+  "이시아",
+  "임도균",
+  "정진우",
+  "최석호",
   "고영민",
 ];
+const photoData = actorNames.map((value) => {
+  return `/images/actors/${value}.png`;
+});
 const ActorsIntro = () => {
   const actorData = photoData.map((value, idx) => {
     return (
@@ -41,10 +29,10 @@ const ActorsIntro = () => {
         className="border box-border flex flex-col w-[220px] md:w-[174px] sm:w-[148px]"
       >
         <div className="w-full h-[300px] md:h-[237px] sm:h-[200px]">
-          <Image src={value} width={1920} height={1920} alt=""></Image>
+          <Image src={value} width={1920} height={1920} alt={actorNames[idx]} className="h-[300px] md:h-[237px] sm:h-[200px]"></Image>
         </div>
         <div className="border-t box-border bg-gray100 flex justify-center items-center w-full h-[54px] sm:h-11">
-          <Text className="text-h6 sm:text-b1">{nameData[idx]}</Text>
+          <Text className="text-h6 sm:text-b1">{actorNames[idx]}</Text>
         </div>
       </div>
     );

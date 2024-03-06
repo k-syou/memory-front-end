@@ -9,17 +9,17 @@ const config: Config = {
   theme: {
     screens: {
       xl: { min: "1440px", max: "1920px" },
-      lg: { min: "1020px", max: "1440px" },
-      md: { min: "768px", max: "1020px" },
-      sm: { max: "768px" },
+      lg: { min: "1020px", max: "1439px" },
+      md: { min: "768px", max: "1019px" },
+      sm: { max: "767px" },
     },
     container: {
       center: true,
       screens: {
         xl: { min: "1440px", max: "1920px" },
-        lg: { min: "1020px", max: "1440px" },
-        md: { min: "768px", max: "1020px" },
-        sm: { min: "360px", max: "768px" },
+        lg: { min: "1020px", max: "1439px" },
+        md: { min: "768px", max: "1019px" },
+        sm: { min: "360px", max: "767px" },
       },
     },
     fontSize: {
