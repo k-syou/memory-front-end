@@ -3,8 +3,8 @@ import Image from "next/image";
 import Text from "@/components/atoms/Text";
 import Section from "@/components/atoms/Section";
 
-const image1 = "/public/images/main/메인2.png"
-const image2 = "/public/images/main/메인3.png"
+const image1 = "/images/main/main2.png"
+const image2 = "/images/main/main3.png"
 
 const main_txt_02_01 = "기억은요,";
 const main_txt_02_02 = `극단 기억은 무대 위에서 감동과 웃음을 나누는 뮤지컬/연극
@@ -58,6 +58,7 @@ const SubContents = () => {
               alt="subContentsImage"
               width={1920}
               height={1920}
+              className="h-full"
             />
           </div>
         </Container>
