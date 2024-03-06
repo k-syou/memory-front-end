@@ -9,17 +9,23 @@ import { ma_txt_03_01, ma_txt_03_02 } from "./constants";
 import TwoRowCarousel from "@/components/atoms/TwoRowCarousel";
 import Image from "next/image";
 
-const photoData = [
-  "/images/actors/프사_지은.png",
-  "/images/actors/프사_혁진.png",
-  "/images/actors/프사_영민.png",
-  "/images/actors/프사_지은.png",
-  "/images/actors/프사_혁진.png",
-  "/images/actors/프사_영민.png",
-  "/images/actors/프사_지은.png",
-  "/images/actors/프사_혁진.png",
-  "/images/actors/프사_영민.png",
+const actorNames = [
+  "권혁진",
+  "김권수",
+  "김규나",
+  "김지은",
+  "온훈",
+  "이다솜",
+  "이시아",
+  "임도균",
+  "정진우",
+  "최석호",
+  "고영민",
 ];
+
+const photoData = actorNames.map((value) => {
+  return `/images/actors/${value}.png`;
+});
 
 const imageData = photoData.map((src, idx) => {
   return (

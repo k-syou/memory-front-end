@@ -3,19 +3,18 @@ import NewCarousel from "@/components/atoms/NewCarousel";
 import Section from "@/components/atoms/Section";
 import React from "react";
 
+const imagePaths: Array<string> = []
+for (let i=1; i<10; i++) {
+  imagePaths.push(`/images/photos/메인 하단${i}.png`)
+}
+
 const PhotoPrev = () => {
   return (
     <Section border={"bottom"}>
       <Container className="h-auto">
         <NewCarousel
-          images={[
-            "/images/photos/p1.jpg",
-            "/images/photos/p2.jpg",
-            "/images/photos/p3.jpg",
-            "/images/photos/p4.jpg",
-            "/images/photos/p5.jpg",
-          ]}
-          pictureClassName="h-[441px] sm:h-[193px] w-auto"
+          images={imagePaths}
+          pictureClassName="h-[441px] sm:h-[193px] w-auto border-x"
           isAutoPlay
           isLoop
         />

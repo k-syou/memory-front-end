@@ -10,6 +10,7 @@ import Section from "@/components/atoms/Section";
 import Container from "@/components/atoms/Container";
 import { AnimatePresence, motion as m } from "framer-motion";
 import { PiPlusThin, PiXLight } from "react-icons/pi";
+import Image from "next/image";
 
 const menuInfos: MenuInfos = {
   mainMenuNames: ["극단 기억", "극단 소식", "극단 앨범"],
@@ -99,8 +100,8 @@ const Navbar = () => {
               className="absolute h-20 md:h-14 sm:h-14 sm:w-[93px] md:w-[93px] w-[124px] align-middle text-center cursor-pointer"
               onClick={() => route.push("/")}
             >
-              <div className="my-auto inline-block">LOGO</div>
-            </button>
+              <div className="my-auto inline-block"><Image src='/images/logo.png' alt="logo" width={1920} height={1920} className="scale-50"/></div>
+            </button> 
 
             {/* 데스크탑 */}
             <div className="h-full flex justify-end md:hidden sm:hidden">
