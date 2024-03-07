@@ -6,6 +6,7 @@ import Button from "../atoms/Button";
 import Section from "../atoms/Section";
 import Title from "../atoms/Title";
 import { ma_txt_05_01 } from "./main/constants";
+import { RiKakaoTalkFill } from "react-icons/ri";
 
 // Mail, Insta 버튼 ClassName
 const btnClassName = "w-[140px] h-[140px] sm:w-[77px] sm:h-[77px] justify-center flex";
@@ -28,7 +29,7 @@ const Contact = () => {
             variant={"circleBtn"}
             className={btnClassName}
           >
-            <CiMail className={iconClassName} />
+            <RiKakaoTalkFill className={iconClassName} />
           </Button>
           {/* 인스타버튼 */}
           <Button

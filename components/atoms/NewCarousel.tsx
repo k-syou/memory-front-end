@@ -27,35 +27,39 @@ const NewCarousel = ({
   isPrevNextBtn,
   isNextShowComponents,
   isLoop,
-  className
+  className,
 }: NewCarouselProps) => {
-
   return (
     <Carousel
-      className={cn("flex justify-center items-center relative", className)}
+      className={cn(
+        "flex justify-center items-center relative w-full",
+        className
+      )}
       opts={{
         loop: isLoop,
+        align: "center",
       }}
-      plugins={[Autoplay({ delay: 3000, active: isAutoPlay  })]}
+      plugins={[Autoplay({ delay: 3000, active: isAutoPlay })]}
     >
-      <CarouselContent className="max-h-[1080px] w-full">
-        {images.map((image, index) => (
-          <CarouselItem
-            key={index}
-            className={cn(
-              "flex justify-center items-center content-center basis-auto overflow-hidden"
-            )}
-          >
-            <Image
-              src={image}
-              alt="demo_image"
-              className={cn(pictureClassName)}
-              width={1920}
-              height={1920}
-              priority
-            />
-          </CarouselItem>
-        ))}
+      <CarouselContent className="-ml-0">
+        {images.map((image, index) => {
+          return (
+            <CarouselItem
+              key={index}
+              className={cn(
+                "flex justify-center items-center content-center basis-auto overflow-hidden px-2"
+              )}
+            >
+              <Image
+                src={image}
+                alt="demo_image"
+                className={cn(pictureClassName)}
+                width={1920}
+                height={1920}
+              />
+            </CarouselItem>
+          );
+        })}
         {isNextShowComponents && (
           <CarouselItem
             className={cn(
@@ -84,7 +88,9 @@ const NewCarousel = ({
           <CarouselPrevious className="absolute left-0 h-full w-[110px] md:w-[58px] rounded-none border-y-0 bg-gray100 border-black hover:bg-black hover:text-gray100" />
           <CarouselNext className="absolute right-0 h-full w-[110px] md:w-[58px] rounded-none border-y-0 bg-gray100 border-black hover:bg-black hover:text-gray100" />
         </>
-      ): <></>}
+      ) : (
+        <></>
+      )}
     </Carousel>
   );
 };
