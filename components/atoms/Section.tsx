@@ -4,7 +4,7 @@ import { forwardRef } from "react";
 
 // text variants
 // class name values from figma
-const SectionVariants = cva("box-border border-solid min-w-[360px]", {
+const SectionVariants = cva("box-border border-solid min-w-[360px] px-5 sm:px-0", {
   variants: {
     overflow: {
       default: "overflow-hidden",

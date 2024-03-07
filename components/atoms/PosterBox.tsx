@@ -81,6 +81,7 @@ const PosterBox = forwardRef<HTMLDivElement, PosterBoxProps>(
     return (
       <div
         id={props.id}
+        onClick={props.onClick}
         className={cn(
           PosterBoxVariants({ mainColor, widthSize }),
           "cursor-pointer flex flex-col"

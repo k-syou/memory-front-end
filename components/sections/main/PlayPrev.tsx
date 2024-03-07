@@ -53,7 +53,6 @@ const PlayPrev = () => {
             pictureClassName="border-x box-border w-[316px] md:w-[235px] sm:w-[148px] h-[445px] md:h-[331px] sm:h-[213px]"
             className="block sm:hidden"
             isNextShowComponents
-            isLoop
             isAutoPlay
           />
           <TwoRowCarousel
@@ -61,7 +60,7 @@ const PlayPrev = () => {
             pictureClassName="h-[200px] w-[150px] border border-solid border-black"
             className="sm:block hidden"
             isAutoPlay
-            isNextShowComponents
+            isNextShowComponents={true}
           />
         </Container>
       </Section>

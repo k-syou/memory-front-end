@@ -9,6 +9,7 @@ import {
 import { cn } from "@/lib/utils";
 import Text from "./Text";
 import Autoplay from "embla-carousel-autoplay";
+import { useState } from "react";
 
 interface TwoRowCarouselProps {
   images: any[];
@@ -33,24 +34,27 @@ const TwoRowCarousel = ({
   for (let index = 0; index < imageCountList.length; index++) {
     imageCountList[index] = index * 2;
   }
-  const nextShowComponent = (
-    <div className={cn("relative", pictureClassName)} >
-      <Text
-        type="paragraph"
-        className={cn(
-          "absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-h6 sm:text-caption"
-        )}
-      >
-        👇
-        <br />
-        앞으로 만들어갈
-        <br />
-        기억들을 기대해 주세요
-      </Text>
-    </div>
-  );
-  let isAddNextShowComponent = !isNextShowComponents;
-  const imageItemEls = imageCountList.map((idx) => {
+  let isAddNextShowComponent = false
+  const nextShowComponent = () => {
+    isAddNextShowComponent = !isAddNextShowComponent;
+    return (
+      <div className={cn("relative", pictureClassName)}>
+        <Text
+          type="paragraph"
+          className={cn(
+            "absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-h6 sm:text-caption"
+          )}
+        >
+          👇
+          <br />
+          앞으로 만들어갈
+          <br />
+          기억들을 기대해 주세요
+        </Text>
+      </div>
+    );
+  };
+  const colItems = imageCountList.map((idx) => {
     let colImages;
     if (idx + 1 != images.length) {
       colImages = (
@@ -70,14 +74,17 @@ const TwoRowCarousel = ({
             {images[idx]}
           </div>
           {!isAddNextShowComponent && isNextShowComponents ? (
-            nextShowComponent
+            nextShowComponent()
           ) : (
             <></>
           )}
         </>
       );
-      isAddNextShowComponent = !isAddNextShowComponent;
     }
+    return colImages
+  })
+
+  const imageItemEls = colItems.map((colImages, idx) => {
     return (
       <div key={idx}>
         <CarouselItem
@@ -86,18 +93,9 @@ const TwoRowCarousel = ({
           )}
         >
           {colImages}
+          
         </CarouselItem>
-        {!isAddNextShowComponent && isNextShowComponents ? (
-          <CarouselItem
-            className={cn(
-              "flex flex-col items-center content-center basis-auto overflow-hidden gap-4"
-            )}
-          >
-            {nextShowComponent}
-          </CarouselItem>
-        ) : (
-          <></>
-        )}
+        
       </div>
     );
   });
@@ -112,6 +110,17 @@ const TwoRowCarousel = ({
     >
       <CarouselContent className="max-h-[1080px] w-full mx-auto">
         {imageItemEls}
+        {!isAddNextShowComponent && isNextShowComponents ? (
+            <CarouselItem
+              className={cn(
+                "flex flex-col items-center content-center basis-auto overflow-hidden gap-4"
+              )}
+            >
+            {nextShowComponent()}
+            </CarouselItem>
+          ) : (
+            <></>
+          )}
       </CarouselContent>
       {isPrevNextBtn ? (
         <>
