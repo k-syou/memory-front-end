@@ -71,11 +71,9 @@ const PosterBox = forwardRef<HTMLDivElement, PosterBoxProps>(
     useEffect(() => {
       document.getElementById(props.id)?.addEventListener("mouseover", () => {
         setIsHover(true);
-        console.log("is Hover True");
       });
       document.getElementById(props.id)?.addEventListener("mouseleave", () => {
         setIsHover(false);
-        console.log("is Hover False");
       });
     });
     return (

@@ -8,7 +8,6 @@ import Button from "@/components/atoms/Button";
 import { IoMenuOutline } from "react-icons/io5";
 import Section from "@/components/atoms/Section";
 import Container from "@/components/atoms/Container";
-import { AnimatePresence, motion as m } from "framer-motion";
 import { PiPlusThin, PiXLight } from "react-icons/pi";
 import Image from "next/image";
 
@@ -16,7 +15,7 @@ const menuInfos: MenuInfos = {
   mainMenuNames: ["극단 기억", "극단 소식", "극단 앨범"],
   mainMenuLinks: ["/about", "/notice", "/photo"],
   subMenuInfo: [
-    ["극단 소개", "단원 소개", "단원 모집", "단원 상세(Test)"],
+    ["극단 소개", "단원 소개", "단원 모집"],
     ["공지사항", "연습일지"],
     ["공연 사진", "연습 사진"],
   ],
@@ -25,7 +24,6 @@ const menuInfos: MenuInfos = {
       "/about#about-intro",
       "/about#actors-intro",
       "/about#recruit-actor",
-      "/about/detail",
     ],
     ["/notice", "/notice"],
     ["/photo", "/photo"],

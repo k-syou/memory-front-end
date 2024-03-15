@@ -2,10 +2,10 @@ import Container from "@/components/atoms/Container";
 import Section from "@/components/atoms/Section";
 import Title from "@/components/atoms/Title";
 import TwoRowCarousel from "@/components/atoms/TwoRowCarousel";
-import Text from "@/components/atoms/Text";
-import Image from "next/image";
 import React from "react";
-const actorNames = [
+import ActorBox from "@/components/atoms/ActorBox";
+const actorNames:Array<"권혁진" | "김권수" | "김규나" | "김지은" | "온훈" | "이다솜" | "이시아" | "임도균" | "정진우" | "최석호" | "고영민" | "default" | "김지영">= [
+  "고영민",
   "권혁진",
   "김권수",
   "김규나",
@@ -16,7 +16,6 @@ const actorNames = [
   "임도균",
   "정진우",
   "최석호",
-  "고영민",
 ];
 const photoData = actorNames.map((value) => {
   return `/images/actors/${value}.png`;
@@ -24,17 +23,12 @@ const photoData = actorNames.map((value) => {
 const ActorsIntro = () => {
   const actorData = photoData.map((value, idx) => {
     return (
-      <div
+      <ActorBox 
         key={idx}
-        className="border box-border flex flex-col w-[220px] md:w-[174px] sm:w-[148px]"
-      >
-        <div className="w-full h-[300px] md:h-[237px] sm:h-[200px]">
-          <Image src={value} width={1920} height={1920} alt={actorNames[idx]} className="h-[300px] md:h-[237px] sm:h-[200px]"></Image>
-        </div>
-        <div className="border-t box-border bg-gray100 flex justify-center items-center w-full h-[54px] sm:h-11">
-          <Text className="text-h6 sm:text-b1">{actorNames[idx]}</Text>
-        </div>
-      </div>
+        actorName={actorNames[idx]}
+        image={value}
+        actorColor={actorNames[idx]}
+      />
     );
   });
   return (

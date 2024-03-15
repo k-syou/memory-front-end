@@ -17,7 +17,7 @@ const RecruitActor = () => {
         textClassName="text-h3 md:text-h4 sm:text-h4"
         isUnderLine
         className="pb-11 pt-[160px] md:pt-12 md:pb-4 md:border-b-0 sm:pt-8 sm:pb-4 sm:border-b-0"
-        text={<>우리, <Enter sm/>함께 할래요?</>}
+        text={<>함께, <Enter sm/>기억 할래요?</>}
       /> 
       <Section border={"bottom"} className="md:pb-14 sm:pb-14">
         <Container className="flex md:flex-col sm:px-6 sm:flex-col">
@@ -47,6 +47,7 @@ const RecruitActor = () => {
               alt="이미지"
               width={1920}
               height={1920}
+              className="h-full"
             ></Image>
           </div>
         </Container>
