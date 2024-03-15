@@ -29,6 +29,7 @@ const AboutIntro = () => {
               alt="이미지"
               height={1920}
               width={1920}
+              className="h-full"
             ></Image>
           </div>
           <div className="flex flex-col pt-12 pl-[72px] md:pl-0 sm:pt-8 sm:pl-0">

@@ -3,8 +3,8 @@ import Image from "next/image";
 import Text from "@/components/atoms/Text";
 import Section from "@/components/atoms/Section";
 
-const image1 = "/images/main/main2.png"
-const image2 = "/images/main/main3.png"
+const image1 = "/images/main/main2.png";
+const image2 = "/images/main/main3.png";
 
 const main_txt_02_01 = "기억은요,";
 const main_txt_02_02 = `극단 기억은 무대 위에서 감동과 웃음을 나누는 뮤지컬/연극
@@ -13,12 +13,10 @@ const main_txt_02_02 = `극단 기억은 무대 위에서 감동과 웃음을 �
 열정과 상상에서 만들어지는 새로운 예술의 즐거움을 공유하며,배우와
 관객 모두에게 잊지 못할 소중한 기억을 함께 나누고 있습니다.`;
 
-const main_txt_02_03 = "기억은요,";
-const main_txt_02_04 = `극단 기억은 무대 위에서 감동과 웃음을 나누는 뮤지컬/연극
-동호회입니다. 우리는 다양한 직업과 전공을 가진 직장인들,
-대학생들이 모여 만들었습니다.예술을 전공하지 않은 사람들의 순수한
-열정과 상상에서 만들어지는 새로운 예술의 즐거움을 공유하며,배우와
-관객 모두에게 잊지 못할 소중한 기억을 함께 나누고 있습니다.`;
+const main_txt_02_03 = "기억해요,";
+const main_txt_02_04 = `기억한다'의 "사전적 의미는 머릿속에 남아서 잊히지 않다." 입니다.
+ 그리고 우리는 잊히지 않는 소중한 시간을 함께 한다고 말합니다. 
+ 기억하며, 또 기억할 수 있는 기억입니다.`;
 
 const SubContents = () => {
   return (
@@ -47,7 +45,9 @@ const SubContents = () => {
         <Container className="h-[365px] lg:h-[306px] flex md:flex-col sm:flex-col sm:px-6 md:gap-[30px] sm:gap-8 md:h-[645px] sm:h-full">
           <div className="h-full w-[220px] lg:w-[30px] border-r md:hidden sm:hidden"></div>
           <div className="w-full flex flex-col pl-[72px] lg:pl-10 md:pl-0 sm:pl-0 pt-12 lg:pt-8">
-            <Text className="text-h4 mb-6 md:mb-4 sm:mb-4">{main_txt_02_03}</Text>
+            <Text className="text-h4 mb-6 md:mb-4 sm:mb-4">
+              {main_txt_02_03}
+            </Text>
             <Text className="text-b1 w-[500px] lg:w-[462px] md:w-[660px] sm:w-[312px]">
               {main_txt_02_04}
             </Text>

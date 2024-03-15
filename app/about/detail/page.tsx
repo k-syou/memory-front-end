@@ -6,14 +6,16 @@ import Text from "@/components/atoms/Text";
 import Title from "@/components/atoms/Title";
 import { actorInfo } from "@/constants";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { PiArrowLeftThin } from "react-icons/pi";
 // type Props = {
 //   actorInfo?: actorInfo;
 // };
 // const ActorDetailPage = ({ actorInfo }: Props) => {
 const ActorDetailPage = () => {
-  const route = useRouter()
+  const router = useRouter()
+  const params = useSearchParams()
+  const name:string = params?.get("name")!
   const actorInfo: actorInfo = {
     activities: [
       {
@@ -43,8 +45,8 @@ const ActorDetailPage = () => {
     ],
     contents:
       "모든 국민은 소급입법에 의하여 참정권의 제한을 받거나 재산권을 박탈당하지 아니한다. 모든 국민은 법률이 정하는 바에 의하여 선거권을 가진다. 이 헌법시행 당시의 대법원장과 대법원판사가 아닌 법관은 제1항 단서의 규정에 불구하고 이 헌법에 의하여 임명된 것으로 본다.",
-    imagePath: "/images/actors/프사_영민.png",
-    name: "최석호",
+    imagePath: `/images/actors/${name}.png`,
+    name: name,
   };
   return (
     <>
@@ -52,7 +54,7 @@ const ActorDetailPage = () => {
         text={
           <>
             {actorInfo.name}
-            <Button variant={"backToListBtn"} className="absolute right-0 h-10" onClick={() => route.push("/about")}>
+            <Button variant={"backToListBtn"} className="absolute right-0 h-10" onClick={() => router.push("/about")}>
               <PiArrowLeftThin className="absolute w-[24px] h-[24px] my-auto top-[50%] translate-y-[-50%] flex items-center" />
               <Text
                 type="paragraph"
