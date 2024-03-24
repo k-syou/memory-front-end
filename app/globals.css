@@ -10,6 +10,11 @@
 input:focus {
   outline: none;
 }
+
+.activate-btn {
+  @apply bg-black text-white
+}
+
 /* Menu Button */
 .menu-btn {
   @apply text-black hover:text-white hover:border-black 
