@@ -1,7 +1,9 @@
+"use client"
 import Container from "@/components/atoms/Container";
 import PosterBox from "@/components/atoms/PosterBox";
 import Section from "@/components/atoms/Section";
 import Title from "@/components/atoms/Title";
+import { useRouter } from "next/navigation";
 
 const playNames = ["넥투노", "로망스다방", "이눈그"];
 
@@ -15,6 +17,7 @@ type playData = {
 };
 
 const playDatas: Array<playData> = playNames.map((name) => {
+  
   let title = name === "넥투노"
   ? "Next to Normal"
   : name === "로망스다방"
@@ -34,12 +37,15 @@ const playDatas: Array<playData> = playNames.map((name) => {
         : "darkTurquoise",
   };
 });
+
 const PhotoMainPage = () => {
+  const router = useRouter()
   const renderPosterBoxes = () => {
     return playDatas.map((data, idx) => {
       return (
         <PosterBox
           id={data.id}
+          onClick={() => router.push(`/photo/detail?id=${data.id}`)}
           widthSize={"photoMain"}
           photoSize={"photoMain"}
           contentSize={"photoMain"}
