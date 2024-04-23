@@ -45,70 +45,70 @@ const config: Config = {
       h2: [
         "48px",
         {
-          fontWeight: 300,
+          fontWeight: 700,
           lineHeight: "80px",
         },
       ],
       h3: [
         "40px",
         {
-          fontWeight: 400,
+          fontWeight: 700,
           lineHeight: "56px",
         },
       ],
       h4: [
         "32px",
         {
-          fontWeight: 400,
+          fontWeight: 700,
           lineHeight: "40px",
         },
       ],
       h5: [
         "24px",
         {
-          fontWeight: 400,
+          fontWeight: 600,
           lineHeight: "36px",
         },
       ],
       h6: [
         "20px",
         {
-          fontWeight: 400,
+          fontWeight: 600,
           lineHeight: "30px",
         },
       ],
       s1: [
-        "16px",
+        "20px",
         {
-          fontWeight: 500,
+          fontWeight: 600,
           lineHeight: "24px",
         },
       ],
       s2: [
-        "14px",
+        "16px",
         {
-          fontWeight: 500,
+          fontWeight: 600,
           lineHeight: "22px",
         },
       ],
       b1: [
-        "16px",
+        "18px",
         {
-          fontWeight: 400,
+          fontWeight: 500,
           lineHeight: "24px",
         },
       ],
       b2: [
-        "15px",
+        "16px",
         {
-          fontWeight: 400,
+          fontWeight: 500,
           lineHeight: "24px",
         },
       ],
       btn: [
-        "14px",
+        "16px",
         {
-          fontWeight: 500,
+          fontWeight: 600,
           lineHeight: "22px",
         },
       ],
@@ -156,6 +156,10 @@ const config: Config = {
       "do-orange": "#fcceaf",
       "noo-green": "#b9e9c9",
       "ko-red": "#fda8a0",
+      "point-color": "#ff7b7b",
+      sub2: "#f3f0fd",
+      sub1: "#ffd4d4",
+      sub3: "#ffe5e5"
     },
     extend: {
       fontFamily: {

@@ -89,8 +89,7 @@ const Navbar = () => {
       {/* Navbar */}
       <Section className="w-full h-20 md:h-14 sm:h-14 relative">
         <Section
-          border={"bottom"}
-          className="h-20 md:h-14 sm:h-14 w-full max-w-[1920px] bg-gray100 z-50 overflow-visible fixed top-0 left-[50%] translate-x-[-50%]"
+          className="h-20 md:h-14 sm:h-14 w-full max-w-[1920px] bg-white z-50 overflow-visible fixed top-0 left-[50%] translate-x-[-50%] shadow-md"
         >
           <Container className="relative">
             {/* Logo */}

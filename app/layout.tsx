@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className={`bg-gray100 relative`}>
+    <html lang="ko" className={`bg-sub2 relative`}>
       <body className="max-w-[1920px] relative mx-auto break-keep">
         <Navbar />
         <main>{children}</main>

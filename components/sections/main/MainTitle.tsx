@@ -15,9 +15,9 @@ const MainTitle = () => {
         text={ma_txt_01_01}
         textClassName="md:text-h4 text-h3 sm:w-[200px] w-full"
       />
-      <Section border={"bottom"}>
+      <Section>
         <Container className="mb-40 md:mb-[120px] sm:mb-14">
-          <div className="w-full h-[762px] lg:h-[540px] md:h-[557px] sm:h-[261px] overflow-hidden grayscale hover:grayscale-0 transition duration-200">
+          <div className="w-full h-[762px] lg:h-[540px] md:h-[557px] sm:h-[261px] overflow-hidden grayscale hover:grayscale-0 transition duration-200 rounded-[32px] shadow-2xl">
             <Image src={MenuImage} alt="" width={1920} height={1920}></Image>
           </div>
         </Container>

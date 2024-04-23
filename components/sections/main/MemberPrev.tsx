@@ -35,10 +35,10 @@ const imageData = photoData.map((src, idx) => {
 
 const MemberPrev = () => {
   return (
-    <>
+    <Section className="bg-gradient-to-t from-sub1 to-sub3">
       <Title
         textClassName="text-h3 sm:text-h4 sm:w-[140px]"
-        className="pt-[160px] sm:pt-12 pb-[40px] sm:pb-6 sm:border-b-0"
+        className="pt-[100px] sm:pt-12 pb-[40px] sm:pb-6 sm:border-b-0"
         containerClassName=""
         text={
           <>
@@ -82,7 +82,7 @@ const MemberPrev = () => {
           /> */}
         </Container>
       </Section>
-    </>
+    </Section>
   );
 };
 
