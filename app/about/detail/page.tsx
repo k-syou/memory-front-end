@@ -16,6 +16,7 @@ const ActorDetailPage = () => {
   const router = useRouter()
   const params = useSearchParams()
   const name:string = params?.get("name")!
+  
   const actorInfo: actorInfo = {
     activities: [
       {

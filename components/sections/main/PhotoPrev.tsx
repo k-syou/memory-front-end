@@ -10,7 +10,7 @@ for (let i=1; i<10; i++) {
 
 const PhotoPrev = () => {
   return (
-    <Section border={"bottom"}>
+    <Section className="pb-[139px]">
       <Container className="h-auto">
         <NewCarousel
           images={imagePaths}

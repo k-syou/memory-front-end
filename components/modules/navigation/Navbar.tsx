@@ -69,7 +69,7 @@ const Navbar = () => {
           <Text
             type="link"
             url={menuInfos.mainMenuLinks[idx]}
-            className="sm:leading-[56px] md:leading-[56px] leading-[80px]"
+            className="sm:leading-[56px] md:leading-[56px] leading-[80px] text-s2"
           >
             {menu}
           </Text>
@@ -89,8 +89,7 @@ const Navbar = () => {
       {/* Navbar */}
       <Section className="w-full h-20 md:h-14 sm:h-14 relative">
         <Section
-          border={"bottom"}
-          className="h-20 md:h-14 sm:h-14 w-full max-w-[1920px] bg-gray100 z-50 overflow-visible fixed top-0 left-[50%] translate-x-[-50%]"
+          className="h-20 md:h-14 sm:h-14 w-full max-w-[1920px] bg-white z-50 overflow-visible fixed top-0 left-[50%] translate-x-[-50%] shadow-md"
         >
           <Container className="relative">
             {/* Logo */}

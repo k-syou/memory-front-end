@@ -35,10 +35,12 @@ const imageData = photoData.map((src, idx) => {
 
 const MemberPrev = () => {
   return (
-    <>
+    <Section className="bg-gradient-to-b from-grad2-1 to-grad2-2 pb-[100px] overflow-hidden relative">
+      <div className="absolute w-[430px] h-[430px] bg-gradient-to-b from-grad2-1 to-grad2-2 rounded-full left-[-200px] top-[-162px]"></div>
+      <div className="absolute w-[577px] h-[577px] bg-gradient-to-b from-grad3-1 to-grad3-2 rounded-full right-[-303px] bottom-[-315px]"></div>
       <Title
         textClassName="text-h3 sm:text-h4 sm:w-[140px]"
-        className="pt-[160px] sm:pt-12 pb-[40px] sm:pb-6 sm:border-b-0"
+        className="pt-[100px] sm:pt-12 pb-[40px] sm:pb-6 sm:border-b-0"
         containerClassName=""
         text={
           <>
@@ -46,21 +48,21 @@ const MemberPrev = () => {
             <Button
               variant={"navbarBtn"}
               className="absolute right-0 sm:right-6 top-[50%] translate-y-[-50%]"
-            >
+              btnColor={"sub-point"}
+            > 
               <Text type="paragraph" className="text-b1 sm:text-caption">
                 {ma_txt_03_02}
               </Text>
             </Button>
           </>
         }
-        isUnderLine
       />
-      <Section border={"bottom"}>
+      <Section>
         <Container className="relative h-full sm:pb-14">
           {/* 테블릿, 데스크탑 캐러셀 */}
           <NewCarousel
             images={photoData}
-            pictureClassName="h-[315px] w-[230px] md:h-[256px] md:w-[186px] border-x border-solid border-black"
+            pictureClassName="h-[316px] w-[235px] md:h-[256px] md:w-[186px] bg-sub2 rounded-[32px]"
             className="sm:hidden block"
             isPrevNextBtn
             isAutoPlay
@@ -82,7 +84,7 @@ const MemberPrev = () => {
           /> */}
         </Container>
       </Section>
-    </>
+    </Section>
   );
 };
 

@@ -13,22 +13,28 @@ const menuList = ["전체", "A팀", "B팀"];
 
 const PhotoDetail = () => {
   const [menuActiveArr, setMenuActiveArr] = useState([true, false, false]);
-  const [curMenu, setCurMenu] = useState('전체')
-  const [curImageData, setCurImageData] = useState(photoData)
-  const [isViewWindow, setIsViewWindow] = useState(false)
+  const [curMenu, setCurMenu] = useState("전체");
+  const [curImageData, setCurImageData] = useState(photoData);
+  const [isViewWindow, setIsViewWindow] = useState(true);
+  const [intIndex, setIntIndex] = useState(0)
+
+  const setIndexNumber = (num: number) => {
+    setIntIndex(num)
+  }
+
   const setImageData = () => {
-    if (curMenu === '전체') {
-      setCurImageData(photoData)
+    if (curMenu === "전체") {
+      setCurImageData(photoData);
     } else {
-      let tmp = []
-      for (let i=0; i<photoData.length; i++) {
+      let tmp = [];
+      for (let i = 0; i < photoData.length; i++) {
         if (photoData[i].team === curMenu) {
-          tmp.push(photoData[i])
+          tmp.push(photoData[i]);
         }
       }
-      setCurImageData(tmp)
+      setCurImageData(tmp);
     }
-  }
+  };
 
   const clickMenu = (idx: number) => {
     let tmp_arr = menuList.map(() => {
@@ -58,13 +64,24 @@ const PhotoDetail = () => {
     );
   };
   const renderImageList = () => {
-    
     return (
       <div className="grid grid-cols-6 lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-2 gap-[6px] mb-[249px]">
         {curImageData.map((image, idx) => {
           return (
-            <div key={idx} className="w-[234px] h-[185px] lg:w-[200px] lg:h-[158px] md:w-[187px] md:h-[149px] sm:w-[154px] sm:h-[122px] bg-gray400 overflow-hidden relative">
-              <Image src={image.path} fill alt={image.num} className="h-auto w-auto object-cover"></Image>
+            <div
+              key={idx}
+              className="w-[234px] h-[185px] lg:w-[200px] lg:h-[158px] md:w-[187px] md:h-[149px] sm:w-[154px] sm:h-[122px] bg-gray400 overflow-hidden relative"
+            >
+              <picture>
+                <source srcSet={image.path} type="image/avif" />
+                <source srcSet={image.path} type="image/webp" />
+                <Image
+                  src={image.path}
+                  fill
+                  alt={image.num}
+                  className="h-auto w-auto object-cover"
+                ></Image>
+              </picture>
               {/* width={1920} height={1920}  */}
             </div>
           );
@@ -85,7 +102,7 @@ const PhotoDetail = () => {
           {renderImageList()}
         </Container>
       </Section>
-      {isViewWindow && <PhotoWindow idx={0} photoData={photoData}/>}
+      {isViewWindow && <PhotoWindow setIndexNumber={setIndexNumber} idx={intIndex} photoData={photoData} />}
     </>
   );
 };

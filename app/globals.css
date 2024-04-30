@@ -7,6 +7,10 @@
   @apply text-[50px]
 }
 
+.test {
+  height: 668px;
+}
+
 input:focus {
   outline: none;
 }

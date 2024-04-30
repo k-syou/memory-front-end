@@ -6,7 +6,7 @@ import { PiDownloadSimpleThin } from "react-icons/pi";
 
 // text variants
 // class name values from figma
-const ButtonVariants = cva("border border-solid border-black box-border", {
+const ButtonVariants = cva("", {
   variants: {
     variant: {
       default: "",
@@ -18,6 +18,8 @@ const ButtonVariants = cva("border border-solid border-black box-border", {
     },
     btnColor: {
       default: "text-black hover:text-gray100 bg-gray100 hover:bg-black",
+      "sub-point": "bg-sub2 hover:bg-point text-point hover:text-white",
+      "point-sub2": "bg-point hover:bg-sub1 text-white",
       black: "text-gray100 bg-black",
     },
     transition: {
