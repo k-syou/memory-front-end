@@ -32,7 +32,7 @@ const NewCarousel = ({
   return (
     <Carousel
       className={cn(
-        "flex justify-center items-center relative w-full",
+        "flex justify-center items-center relative w-[1260px] mx-auto",
         className
       )}
       opts={{
@@ -66,7 +66,7 @@ const NewCarousel = ({
               "flex justify-center text-center items-center basis-auto overflow-hidden"
             )}
           >
-            <div className={cn("relative", pictureClassName)}>
+            <div className={cn("relative border border-grad2-1", pictureClassName)}>
               <Text
                 type="paragraph"
                 className={cn(
@@ -85,8 +85,10 @@ const NewCarousel = ({
       </CarouselContent>
       {isPrevNextBtn ? (
         <>
-          <CarouselPrevious className="absolute left-0 h-full w-[110px] md:w-[58px] rounded-none border-y-0 bg-gray100 border-black hover:bg-black hover:text-gray100" />
-          <CarouselNext className="absolute right-0 h-full w-[110px] md:w-[58px] rounded-none border-y-0 bg-gray100 border-black hover:bg-black hover:text-gray100" />
+          <CarouselPrevious className="h-[72px] w-[72px] bg-point text-white border-0 hover:bg-sub1 left-[-90px]" />
+          <CarouselNext className="h-[72px] w-[72px] bg-point text-white border-0 hover:bg-sub1 right-[-90px]" />
+          {/* <CarouselPrevious className="absolute left-0 h-full w-[110px] md:w-[58px] rounded-none border-y-0 bg-gray100 border-black hover:bg-black hover:text-gray100" />
+          <CarouselNext className="absolute right-0 h-full w-[110px] md:w-[58px] rounded-none border-y-0 bg-gray100 border-black hover:bg-black hover:text-gray100" /> */}
         </>
       ) : (
         <></>

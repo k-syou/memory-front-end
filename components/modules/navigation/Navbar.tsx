@@ -69,7 +69,7 @@ const Navbar = () => {
           <Text
             type="link"
             url={menuInfos.mainMenuLinks[idx]}
-            className="sm:leading-[56px] md:leading-[56px] leading-[80px]"
+            className="sm:leading-[56px] md:leading-[56px] leading-[80px] text-s2"
           >
             {menu}
           </Text>

@@ -11,12 +11,12 @@ const Footer = () => {
           <Text
             language={"en"}
             type="paragraph"
-            className="text-s1 text-gray900 sm:text-caption"
+            className="text-s1 text-sub1 sm:text-caption"
           >{`©2022-2024 Keeok All rights reserved.`}</Text>
           <Text
             language={"en"}
             type="paragraph"
-            className="text-s2 text-gray300 sm:text-caption"
+            className="text-s2 text-point sm:text-caption"
           >{`Keeok IT Team. HJ KS KN JF JW SH`}</Text>
         </footer>
       </Container>

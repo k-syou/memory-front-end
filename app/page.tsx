@@ -13,7 +13,7 @@ export default function Home() {
       <SubContents />
       <MemberPrev />
       <PlayPrev />
-      <Contact />
+      <Contact /> 
       <PhotoPrev />
     </>
   );

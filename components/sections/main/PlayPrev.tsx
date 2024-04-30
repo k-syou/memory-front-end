@@ -27,13 +27,13 @@ const PlayPrev = () => {
   return (
     <>
       <Title
-        isUnderLine
         className="pb-10 md:pb-8 sm:pb-6 pt-40 md:pt-[120px] sm:pt-12 sm:border-b-0"
         text={
           <>
             {ma_txt_04_01}
             <Button
               variant={"navbarBtn"}
+              btnColor={"sub-point"}
               className="absolute right-0 sm:right-6 top-[50%] translate-y-[-50%]"
             >
               <Text type="paragraph" className="text-b1 sm:text-caption">
@@ -46,11 +46,11 @@ const PlayPrev = () => {
         containerClassName="relative"
         textClassName="text-h3 md:text-h4 sm:text-h4"
       />
-      <Section border={"bottom"}>
+      <Section>
         <Container className="sm:mb-14">
           <NewCarousel
             images={posterPaths}
-            pictureClassName="border-x box-border w-[316px] md:w-[235px] sm:w-[148px] h-[445px] md:h-[331px] sm:h-[213px]"
+            pictureClassName="w-[275px] md:w-[235px] sm:w-[148px] h-[389px] md:h-[331px] sm:h-[213px] rounded-[32px]"
             className="block sm:hidden"
             isNextShowComponents
             isAutoPlay

@@ -33,9 +33,9 @@ const SubContents = () => {
           </div>
           <div className="w-full flex flex-col pl-[24px] lg:pl-14 lg:pt-8 md:pl-0 sm:pl-0">
             <Text className="text-h4 pl-8 mb-[24px] md:mb-4 sm:mb-4">
-              <span className="text-point-color">{main_txt_02_01}</span>
+              <span className="text-point">{main_txt_02_01}</span>
             </Text>
-            <div className="w-full h-full bg-sub1 bg-gradient-to-t from-sub1 to-sub3 rounded-[32px]">
+            <div className="w-full h-full bg-gradient-to-b from-grad1-1 to-grad1-2 rounded-[32px]">
               <Text className="pt-6 pl-8 text-b1 w-[582px] lg:w-[480px] md:w-[660px] sm:w-[312px]">
                 {main_txt_02_02}
               </Text>
@@ -47,9 +47,9 @@ const SubContents = () => {
         <Container className="h-[420px] mb-[264px] lg:h-[306px] flex md:flex-col sm:flex-col sm:px-6 md:gap-[30px] sm:gap-8 md:h-[645px] sm:h-full">
           <div className="w-full flex flex-col lg:pl-10 md:pl-0 sm:pl-0 lg:pt-8 mr-6">
             <Text className="text-h4 pl-8 mb-6 md:mb-4 sm:mb-4">
-            <span className="text-point-color">{main_txt_02_03}</span>
+            <span className="text-point">{main_txt_02_03}</span>
             </Text>
-            <div className="w-full h-full bg-sub1 bg-gradient-to-t from-sub1 to-sub3 rounded-[32px]">
+            <div className="w-full h-full bg-gradient-to-b from-grad1-1 to-grad1-2 rounded-[32px]">
               <Text className="pt-6 pl-8 text-b1 w-[582px] lg:w-[480px] md:w-[660px] sm:w-[312px]">
                 {main_txt_02_04}
               </Text>

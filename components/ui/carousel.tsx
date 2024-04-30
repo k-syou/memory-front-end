@@ -6,6 +6,7 @@ import useEmblaCarousel, {
 } from "embla-carousel-react"
 import { ArrowLeft, ArrowRight } from "lucide-react"
 import { PiCaretLeftThin, PiCaretRightThin } from "react-icons/pi";
+import { BiSolidLeftArrow, BiSolidRightArrow } from "react-icons/bi"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 
@@ -206,7 +207,7 @@ const CarouselPrevious = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "absolute  h-8 w-8 rounded-full",
+        "absolute h-8 w-8 rounded-full",
         orientation === "horizontal"
           ? "-left-12 top-1/2 -translate-y-1/2"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -216,7 +217,7 @@ const CarouselPrevious = React.forwardRef<
       onClick={scrollPrev}
       {...props}
     >
-      <PiCaretLeftThin className="carousel-prev-icon"/>
+      <BiSolidLeftArrow className="carousel-prev-icon w-8 h-8 absolute left-[49%] translate-x-[-51%]"/>
       <span className="sr-only">Previous slide</span>
     </Button>
   )
@@ -247,7 +248,7 @@ const CarouselNext = React.forwardRef<
     >
       {/* <ArrowRight className="h-4 w-4" /> */}
       
-      <PiCaretRightThin className="carousel-next-icon"/>
+      <BiSolidRightArrow className="carousel-next-icon w-8 h-8 absolute left-[51%] translate-x-[-49%]"/>
       <span className="sr-only">Next slide</span>
     </Button>
   )

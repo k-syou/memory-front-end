@@ -156,10 +156,15 @@ const config: Config = {
       "do-orange": "#fcceaf",
       "noo-green": "#b9e9c9",
       "ko-red": "#fda8a0",
-      "point-color": "#ff7b7b",
-      sub2: "#f3f0fd",
-      sub1: "#ffd4d4",
-      sub3: "#ffe5e5"
+      "point": "#ff7b7b",
+      sub2: "#ffeeee",
+      sub1: "#d24343",
+      "grad1-1": "#ffeeee",
+      "grad1-2": "#ffe0e0",
+      "grad2-1": "#ffcbcb",
+      "grad2-2": "#ffb0b0",
+      "grad3-1": "#ffa9a9",
+      "grad3-2": "#ff7979",
     },
     extend: {
       fontFamily: {
